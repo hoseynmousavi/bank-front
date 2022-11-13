@@ -1,0 +1,11 @@
+@import "../seyed-modules/styles/index";
+
+@import "animations";
+@import "input";
+@import "header";
+@import "footer";
+@import "banks-page";
+
+body {
+  background-color: var(--first-background-color) !important;
+}

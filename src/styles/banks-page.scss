@@ -1,0 +1,80 @@
+.banks-page {
+  margin-top: var(--header-height);
+  padding: 0 var(--mobile-first-solid-padding);
+}
+
+.banks-page-desc {
+  width: 100%;
+  display: inline-block;
+  color: var(--second-text-color);
+  font-size: var(--large-font);
+  margin-top: 16px;
+}
+
+.banks-page-search {
+  margin-top: 120px;
+}
+
+.banks-page-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 240px;
+  width: calc(100% + 16px);
+}
+
+.banks-page-list-item {
+  box-shadow: var(--first-shadow);
+  border-radius: var(--second-radius);
+  padding: 16px;
+  margin-inline-end: 16px;
+  margin-bottom: 16px;
+  width: 400px;
+  flex-grow: 1;
+
+  &.hidden {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    box-shadow: none;
+  }
+}
+
+.banks-page-list-item-header {
+  display: flex;
+  align-items: center;
+}
+
+.banks-page-list-item-header-logo {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  border: 1px solid var(--first-border-color);
+  border-radius: var(--first-radius);
+  margin-inline-end: 16px;
+}
+
+.banks-page-list-item-content-title {
+  color: var(--third-text-color);
+  font-family: "my-font-bold", serif;
+  font-size: var(--huge-font);
+}
+
+.banks-page-list-item-content-desc {
+  color: var(--third-text-color);
+  font-size: var(--big-font);
+}
+
+.banks-page-list-btn {
+  border-radius: var(--first-radius);
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  font-size: var(--big-font);
+}
+
+.banks-page-list-btn-icon {
+  width: 16px;
+  height: 16px;
+}
