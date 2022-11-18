@@ -11,6 +11,7 @@ import AuthActions from "./context/auth/AuthActions"
 import offlineSending from "./constant/offlineSending"
 import changeFontVariablesConstant from "./constant/changeFontVariablesConstant"
 import LanguageProvider from "./seyed-modules/context/language/LanguageReducer"
+import BankProvider from "./context/bank/BankReducer"
 
 const root = createRoot(document.getElementById("root"))
 
@@ -20,7 +21,9 @@ root.render(
     <LanguageProvider changeVariables={changeFontVariablesConstant}>
         <ThemeProvider changeVariables={changeColorVariablesConstant}>
             <AuthProvider>
-                <WrappedApp/>
+                <BankProvider>
+                    <WrappedApp/>
+                </BankProvider>
             </AuthProvider>
         </ThemeProvider>
     </LanguageProvider>,

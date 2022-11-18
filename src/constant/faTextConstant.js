@@ -2,11 +2,17 @@ const faTextConstant = {
     whatIsRanking: "رتبه‌بندی چیست",
     banks: "بانک‌ها",
     indicator: "شاخص‌ها",
-    aboutUs: "درباره‌ما",
+    aboutUs: "درباره‌ی ما",
     contactUs: "تماس با ما",
+
+    bank: "بانک ",
 
     banksPageDesc: "از این قسمت می‌توانید لیست بانک‌های رتبه‌بندی شده را مشاهده کنید. با انتخاب هر بانک، اطلاعات و رتبه‌ی تفصیلی آن قابل مشاهده است.",
     banksPageSearch: "بانک موردنظر خود را بنویسید.",
+
+    bankPageSearch: "شاخص موردنظر خود را بنویسید.",
+
+    indicatorsPageDesc: "از این قسمت می‌توانید لیست شاخص‌هایی که رتبه‌بندی بر اساس آن‌ها انجام می‌شود را مشاهده کنید. با انتخاب هر شاخص، توضیحات و وضعیت هر بانک در آن قابل مشاهده است.",
 
     point: "نمره کل: ",
 
@@ -19,6 +25,16 @@ const faTextConstant = {
 
     email: "hoseyn.mousavi78@gmail.com",
     phone: "09123456789",
+    bankType: "نوع بانک: ",
+
+    bankChartTitle: "نمودار نمره‌ کل در طول زمان",
+
+    bankIndicatorTitle: "نسبت درآمد تسهيلات به هزينه‌ی سود سپرده",
+    bankIndicatorDesc: "استخراج از صورت‌های مالی",
+
+    indicatorDesc: "توضیحات شاخص",
+    indicatorCount: "حسابرسی شده",
+    indicatorWeight: "وزن: ",
 }
 
 export default faTextConstant

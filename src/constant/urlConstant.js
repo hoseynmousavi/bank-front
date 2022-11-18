@@ -1,8 +1,14 @@
 const urlConstant = {
     whatIsRanking: "/ranking",
-    banks: "/banks",
-    indicator: "/indicators",
+
+    bank: id => `/bank/${id}`,
+    banks: "*",
+
+    indicator: id => `/indicator/${id}`,
+    indicators: "/indicators",
+
     aboutUs: "/about-us",
+
     contactUs: "/contact-us",
 }
 

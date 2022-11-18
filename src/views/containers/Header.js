@@ -12,7 +12,7 @@ function Header()
             <div className="header-content">
                 <HeaderItem text={faTextConstant.whatIsRanking} link={urlConstant.whatIsRanking}/>
                 <HeaderItem text={faTextConstant.banks} link={urlConstant.banks}/>
-                <HeaderItem text={faTextConstant.indicator} link={urlConstant.indicator}/>
+                <HeaderItem text={faTextConstant.indicator} link={urlConstant.indicators}/>
                 <HeaderItem text={faTextConstant.aboutUs} link={urlConstant.aboutUs}/>
                 <HeaderItem text={faTextConstant.contactUs} link={urlConstant.contactUs}/>
             </div>

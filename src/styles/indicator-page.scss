@@ -1,0 +1,87 @@
+.indicator-page-item-button {
+  display: flex;
+  align-items: center;
+}
+
+.indicator-page-item-button-label {
+  background-color: var(--first-border-color);
+  height: var(--btn-input-height);
+  padding: 0 16px;
+  border-radius: var(--first-radius);
+  margin-left: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "my-font-demibold", serif;
+  font-size: var(--large-font);
+
+  &.count {
+    color: var(--first-color);
+  }
+}
+
+.indicator-page-box {
+  display: inline-block;
+  width: calc(100% - 2 * var(--mobile-first-solid-padding));
+  margin: 88px var(--mobile-first-solid-padding) 0;
+  background-color: var(--first-background-color);
+  border-radius: var(--first-radius);
+  border: 3px solid var(--first-border-color);
+  padding: 24px 48px;
+}
+
+.indicator-page-box-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.indicator-page-box-content {
+  margin-top: 32px;
+  font-family: "my-font-demibold", serif;
+  font-size: var(--big-font);
+  color: var(--second-text-color);
+  text-align: justify;
+  text-align-last: right;
+  white-space: pre-line;
+}
+
+.indicator-page-list-item {
+  background-color: var(--first-color);
+  border-radius: var(--first-radius);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 16px;
+}
+
+.indicator-page-list-item-percent {
+  padding: 16px;
+  color: var(--second-text-color);
+  font-size: var(--huge-font);
+  font-family: "my-font-bold", serif;
+}
+
+.indicator-page-list-item-logo {
+  width: 80px;
+  height: 80px;
+  background-color: var(--first-background-color);
+  margin-left: 16px;
+  border-radius: var(--first-radius);
+}
+
+.indicator-page-list-item-chart {
+  direction: ltr;
+}
+
+.indicator-page-list-item-content-name {
+  color: var(--solid-light);
+  font-size: var(--huge-font);
+  font-family: "my-font-bold", serif;
+}
+
+.indicator-page-list-item-content-desc {
+  color: var(--solid-light);
+  font-size: var(--large-font);
+  font-family: "my-font-demibold", serif;
+}
