@@ -43,4 +43,4 @@ app.route("*").get((req, res) =>
     else res.sendFile(path.join(__dirname, "/updating.html"))
 })
 
-app.listen(process.env.5000, () => console.log(`Server is running in ${process.env.5000} ... `))
+app.listen(5000, () => console.log(`Server is running in ${5000} ... `))
