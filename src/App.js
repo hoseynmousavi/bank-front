@@ -19,8 +19,9 @@ function App()
             <Switch>
                 <Route path={urlConstant.indicator(":id")} render={() => <IndicatorPage/>}/>
                 <Route path={urlConstant.indicators} render={() => <IndicatorsPage/>}/>
-                <Route path={urlConstant.bank(":id")} render={() => <BankPage/>}/>
+                <Route path={urlConstant.bank(":id")} render={route => <BankPage route={route}/>}/>
                 <Route path={urlConstant.banks} render={() => <BanksPage/>}/>
+                <Route path="*" render={() => <div>NOT FOUND</div>}/>
             </Switch>
 
             <ToastContainer/>

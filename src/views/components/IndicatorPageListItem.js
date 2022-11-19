@@ -39,7 +39,7 @@ function IndicatorPageListItem()
                     <XAxis stroke="var(--second-text-color)" dataKey="name"/>
                     <YAxis stroke="var(--second-text-color)"/>
                     <Tooltip/>
-                    <Line type="monotone" dataKey="uv" stroke="var(--first-color)" strokeWidth={3}/>
+                    <Line type="monotone" dataKey="score" stroke="var(--first-color)" strokeWidth={3}/>
                 </LineChart>
             </div>
         </div>

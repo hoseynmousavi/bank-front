@@ -1,13 +1,15 @@
 import ImageShow from "../../seyed-modules/components/ImageShow"
-import logo from "../../media/images/bank-logo.png"
 import Button from "../../seyed-modules/components/Button"
 import {CartesianGrid, Line, LineChart, Tooltip, XAxis, YAxis} from "recharts"
 import {useEffect, useRef, useState} from "react"
 import faTextConstant from "../../constant/faTextConstant"
 import ArrowSvg from "../../media/svg/ArrowSvg"
 import dataCons from "../../constant/dataCons"
+import getImage from "../../helpers/getImage"
+import Link from "../../seyed-modules/components/Link"
+import urlConstant from "../../constant/urlConstant"
 
-function BanksPageListItem()
+function BanksPageListItem({data: {_id, logo, name, type, established_year, total_score, deposit_amount, major_shareholders, employees_numbers, basic_capital, branches_number, score_chart}})
 {
     const [isChartVisible, setIsChartVisible] = useState(false)
     const contRef = useRef(null)
@@ -34,18 +36,18 @@ function BanksPageListItem()
 
     return (
         <div className="banks-page-list-item" ref={contRef}>
-            <div className="banks-page-list-item-header">
-                <ImageShow className="banks-page-list-item-header-logo" src={logo}/>
+            <Link to={urlConstant.bank(_id)} className="banks-page-list-item-header">
+                <ImageShow className="banks-page-list-item-header-logo" src={getImage(logo)}/>
                 <div>
-                    <p className="banks-page-list-item-content-title">بانک سپه</p>
-                    <p className="banks-page-list-item-content-desc">دولتی</p>
+                    <p className="banks-page-list-item-content-title">{faTextConstant.bank}{name}</p>
+                    <p className="banks-page-list-item-content-desc">{type}</p>
                 </div>
-            </div>
+            </Link>
             <Button className={`banks-page-list-btn ${isChartVisible && "chart"}`} style={{height: isChartVisible ? height : "var(--btn-input-height)"}} onClick={toggleChart}>
                 <div className={`banks-page-list-btn-content ${isChartVisible && "hide"}`}>
                     <div>
                         {faTextConstant.point}
-                        ۸/۱۰
+                        {total_score}/۱۰
                     </div>
                     <ArrowSvg className="banks-page-list-btn-icon"/>
                 </div>
@@ -55,7 +57,7 @@ function BanksPageListItem()
                         <XAxis stroke="white" dataKey="name"/>
                         <YAxis stroke="white"/>
                         <Tooltip/>
-                        <Line type="monotone" dataKey="uv" stroke="var(--first-color)" strokeWidth={3}/>
+                        <Line type="monotone" dataKey="score" stroke="var(--first-color)" strokeWidth={3}/>
                     </LineChart>
                 </div>
             </Button>

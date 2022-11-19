@@ -57,7 +57,7 @@ function BankPageIndicator()
                             <XAxis stroke="white" dataKey="name"/>
                             <YAxis stroke="white"/>
                             <Tooltip/>
-                            <Line type="monotone" dataKey="uv" stroke="var(--first-color)" strokeWidth={3}/>
+                            <Line type="monotone" dataKey="score" stroke="var(--first-color)" strokeWidth={3}/>
                         </LineChart>
                     </div>
                 </Button>

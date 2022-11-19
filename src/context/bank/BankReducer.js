@@ -1,12 +1,14 @@
 import {createContext, useReducer} from "react"
-import {GET_BANK} from "./BankTypes"
+import {GET_BANK, GET_BANKS} from "./BankTypes"
 
 export const BankContext = createContext(null)
 
 function BankProvider({children})
 {
     const initialState = {
+        keys: [],
         results: {},
+        getListDone: false,
     }
 
     const [state, dispatch] = useReducer(reducer, initialState)
@@ -15,14 +17,27 @@ function BankProvider({children})
     {
         switch (action.type)
         {
+            case GET_BANKS:
+            {
+                const {res: {data}} = action.payload
+                return {
+                    ...state,
+                    keys: [...new Set([...state.keys, ...data.map(item => item._id)])],
+                    results: {
+                        ...state.results,
+                        ...data.reduce((sum, item) => ({...sum, [item._id]: item}), {}),
+                    },
+                    getListDone: true,
+                }
+            }
             case GET_BANK:
             {
-                const {res} = action.payload
+                const {res: {data}} = action.payload
                 return {
                     ...state,
                     results: {
-                        ...res,
-                        getDone: true,
+                        ...state.results,
+                        [data._id]: data,
                     },
                 }
             }

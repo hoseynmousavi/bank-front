@@ -1,10 +1,22 @@
 import request from "../../seyed-modules/request/request"
 import apiUrlsConstant from "../../constant/apiUrlsConstant"
-import {GET_BANK} from "./BankTypes"
+import {GET_BANK, GET_BANKS} from "./BankTypes"
 
-function getBank({dispatch})
+function getBanks({dispatch})
 {
     request.get({url: apiUrlsConstant.getBank})
+        .then(res =>
+        {
+            dispatch({
+                type: GET_BANKS,
+                payload: {res},
+            })
+        })
+}
+
+function getBank({_id, dispatch})
+{
+    request.get({url: apiUrlsConstant.getBank, param: `?_id=${_id}`})
         .then(res =>
         {
             dispatch({
@@ -15,6 +27,7 @@ function getBank({dispatch})
 }
 
 const BankActions = {
+    getBanks,
     getBank,
 }
 

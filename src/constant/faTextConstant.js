@@ -25,7 +25,17 @@ const faTextConstant = {
 
     email: "hoseyn.mousavi78@gmail.com",
     phone: "09123456789",
-    bankType: "نوع بانک: ",
+
+    type: "نوع بانک: ",
+    established_year: "سال تاسیس: ",
+    total_score: "نمره کل: ",
+    deposit_amount: "میزان کل سپرده: ",
+    major_shareholders: "سهامداران عمده: ",
+    employees_numbers: "تعداد کارمندان: ",
+    basic_capital: "سرمایه‌ی پایه: ",
+    branches_number: "تعداد شعب: ",
+
+    capitalUnit: " همت",
 
     bankChartTitle: "نمودار نمره‌ کل در طول زمان",
 
