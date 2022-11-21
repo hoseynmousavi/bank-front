@@ -1,5 +1,4 @@
 import GetBank from "../../hooks/GetBank"
-import LoadingWrapper from "../../seyed-modules/components/LoadingWrapper"
 import ArrowSvg from "../../media/svg/ArrowSvg"
 import ImageShow from "../../seyed-modules/components/ImageShow"
 import faTextConstant from "../../constant/faTextConstant"
@@ -15,13 +14,14 @@ import showNumber from "../../helpers/showNumber"
 
 function BankPage({route: {match: {params: {id}}}})
 {
-    const {isLoading, data} = GetBank({_id: id})
-    const {logo, name, type, established_year, total_score, deposit_amount, major_shareholders, employees_numbers, basic_capital, branches_number, score_chart} = data || {}
-
-    if (isLoading) return <LoadingWrapper haveBg/>
-    else return (
+    const {data} = GetBank({_id: id})
+    const {
+        logo, name, type, established_year, deposit_amount, major_shareholders, employees_numbers, basic_capital, branches_number,
+        bankIndicator, total_score, total_score_chart,
+    } = data
+    return (
         <>
-            <div className="bank-page">
+            <div className="banks-page">
                 <div className="bank-page-header">
                     <Link to={urlConstant.banks} className="bank-page-header-title">{faTextConstant.banks}</Link>
                     <ArrowSvg className="bank-page-header-arrow"/>
@@ -35,7 +35,7 @@ function BankPage({route: {match: {params: {id}}}})
                     <div className="bank-page-box-second">
                         <div className="bank-page-box-second-text">{faTextConstant.type}{type}</div>
                         <div className="bank-page-box-second-text">{faTextConstant.established_year}{established_year}</div>
-                        <div className="bank-page-box-second-text">{faTextConstant.total_score}{total_score}</div>
+                        <div className="bank-page-box-second-text">{faTextConstant.total_score}{showNumber(total_score, 1)}</div>
                         <div className="bank-page-box-second-text">{faTextConstant.deposit_amount}{showNumber(deposit_amount)}</div>
                         <div className="bank-page-box-second-text">{faTextConstant.major_shareholders}{major_shareholders}</div>
                         <div className="bank-page-box-second-text">{faTextConstant.employees_numbers}{employees_numbers}</div>
@@ -45,14 +45,15 @@ function BankPage({route: {match: {params: {id}}}})
                 </div>
                 <div className="bank-page-chart">
                     <div className="bank-page-chart-title">{faTextConstant.bankChartTitle}</div>
-                    <BankPageChart score_chart={score_chart}/>
+                    <BankPageChart score_chart={total_score_chart}/>
                 </div>
                 <Input className="bank-page-search" name="search" Icon={SearchSvg} iconClassName="banks-page-search-icon" placeholder={faTextConstant.bankPageSearch}/>
                 <div className="bank-page-indicators">
-                    <BankPageIndicator/>
-                    <BankPageIndicator/>
-                    <BankPageIndicator/>
-                    <BankPageIndicator/>
+                    {
+                        bankIndicator.map(item =>
+                            <BankPageIndicator key={item._id} data={item}/>,
+                        )
+                    }
                 </div>
             </div>
             <Footer/>

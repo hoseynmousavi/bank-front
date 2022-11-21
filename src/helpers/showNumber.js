@@ -1,6 +1,6 @@
-function showNumber(price)
+function showNumber(price, fixed = 0)
 {
-    let output = price.toFixed(0).toString().split("").reverse().join("")
+    let output = price.toFixed(fixed).toString().split("").reverse().join("")
     let index = 3
     while (output[index] !== undefined)
     {

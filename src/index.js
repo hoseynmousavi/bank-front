@@ -12,6 +12,8 @@ import offlineSending from "./constant/offlineSending"
 import changeFontVariablesConstant from "./constant/changeFontVariablesConstant"
 import LanguageProvider from "./seyed-modules/context/language/LanguageReducer"
 import BankProvider from "./context/bank/BankReducer"
+import IndicatorProvider from "./context/indicator/IndicatorReducer"
+import BankIndicatorProvider from "./context/bankIndicator/BankIndicatorReducer"
 
 const root = createRoot(document.getElementById("root"))
 
@@ -21,9 +23,13 @@ root.render(
     <LanguageProvider changeVariables={changeFontVariablesConstant}>
         <ThemeProvider changeVariables={changeColorVariablesConstant} disable={true}>
             <AuthProvider>
-                <BankProvider>
-                    <WrappedApp/>
-                </BankProvider>
+                <BankIndicatorProvider>
+                    <BankProvider>
+                        <IndicatorProvider>
+                            <WrappedApp/>
+                        </IndicatorProvider>
+                    </BankProvider>
+                </BankIndicatorProvider>
             </AuthProvider>
         </ThemeProvider>
     </LanguageProvider>,

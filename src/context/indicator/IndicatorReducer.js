@@ -1,9 +1,9 @@
 import {createContext, useReducer} from "react"
-import {GET_BANKS} from "./BankTypes"
+import {GET_INDICATORS} from "./IndicatorTypes"
 
-export const BankContext = createContext(null)
+export const IndicatorContext = createContext(null)
 
-function BankProvider({children})
+function IndicatorProvider({children})
 {
     const initialState = {
         keys: [],
@@ -17,7 +17,7 @@ function BankProvider({children})
     {
         switch (action.type)
         {
-            case GET_BANKS:
+            case GET_INDICATORS:
             {
                 const {res: {data}} = action.payload
                 return {
@@ -36,10 +36,10 @@ function BankProvider({children})
     }
 
     return (
-        <BankContext.Provider value={{state, dispatch}}>
+        <IndicatorContext.Provider value={{state, dispatch}}>
             {children}
-        </BankContext.Provider>
+        </IndicatorContext.Provider>
     )
 }
 
-export default BankProvider
+export default IndicatorProvider

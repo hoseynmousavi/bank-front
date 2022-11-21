@@ -4,13 +4,11 @@ import SearchSvg from "../../media/svg/SearchSvg"
 import Footer from "../containers/Footer"
 import BanksPageListItem from "../components/BanksPageListItem"
 import GetBanks from "../../hooks/GetBanks"
-import LoadingWrapper from "../../seyed-modules/components/LoadingWrapper"
 
 function BanksPage()
 {
-    const {data, isLoading} = GetBanks()
-    if (isLoading) return <LoadingWrapper haveBg/>
-    else return (
+    const {data} = GetBanks()
+    return (
         <>
             <div className="banks-page">
                 <p className="banks-page-desc">{faTextConstant.banksPageDesc}</p>

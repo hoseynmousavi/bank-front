@@ -3,9 +3,10 @@ import Button from "../../seyed-modules/components/Button"
 import ArrowSvg from "../../media/svg/ArrowSvg"
 import {CartesianGrid, Line, LineChart, Tooltip, XAxis, YAxis} from "recharts"
 import {useEffect, useRef, useState} from "react"
-import dataCons from "../../constant/dataCons"
+import urlConstant from "../../constant/urlConstant"
+import Link from "../../seyed-modules/components/Link"
 
-function BankPageIndicator()
+function BankPageIndicator({data: {score_chart, percent, indicator: {_id, title, description}}})
 {
     const [isChartVisible, setIsChartVisible] = useState(false)
     const contRef = useRef(null)
@@ -34,13 +35,17 @@ function BankPageIndicator()
         <div className="bank-page-indicator-item">
             <div className="bank-page-indicator-item-detail">
                 <div>
-                    <div className="bank-page-indicator-item-text-title">{faTextConstant.bankIndicatorTitle}</div>
-                    <div className="bank-page-indicator-item-text-desc">{faTextConstant.bankIndicatorDesc}</div>
+                    <div className="bank-page-indicator-item-text-title">{title}</div>
+                    <div className="bank-page-indicator-item-text-desc">{description}</div>
                 </div>
-                <Button className={`bank-page-indicator-item-first-btn ${isChartVisible ? "" : "hide"}`}>{faTextConstant.indicatorDesc}</Button>
+                <Link to={urlConstant.indicator(_id)}>
+                    <Button className={`bank-page-indicator-item-first-btn ${isChartVisible ? "" : "hide"}`}>{faTextConstant.indicatorDesc}</Button>
+                </Link>
             </div>
             <div className="bank-page-indicator-item-buttons" ref={contRef}>
-                <Button className={`bank-page-indicator-item-first-btn ${isChartVisible ? "hide" : ""}`}>{faTextConstant.indicatorDesc}</Button>
+                <Link to={urlConstant.indicator(_id)}>
+                    <Button className={`bank-page-indicator-item-first-btn ${isChartVisible ? "hide" : ""}`}>{faTextConstant.indicatorDesc}</Button>
+                </Link>
                 <Button className={`bank-page-indicator-item-second-btn ${isChartVisible && "chart"}`}
                         style={{
                             height: isChartVisible ? height : "var(--btn-input-height)",
@@ -48,14 +53,14 @@ function BankPageIndicator()
                         }}
                         onClick={toggleChart}>
                     <div className={`banks-page-list-btn-content ${isChartVisible && "hide"}`}>
-                        <div>27 درصد</div>
+                        <div>{percent} درصد</div>
                         <ArrowSvg className="bank-page-indicator-item-second-btn-icon"/>
                     </div>
                     <div className={`banks-page-list-item-chart ${!isChartVisible && "hide"}`} style={{height: isChartVisible ? height : "0"}}>
-                        <LineChart width={width} height={height} data={dataCons} margin={{right: 40, top: 32}}>
+                        <LineChart width={width} height={height} data={score_chart} margin={{right: 40, top: 32}}>
                             <CartesianGrid stroke="var(--first-background-color)" strokeDasharray="5 5"/>
-                            <XAxis stroke="white" dataKey="name"/>
-                            <YAxis stroke="white"/>
+                            <XAxis stroke="var(--first-background-color)" dataKey="name"/>
+                            <YAxis stroke="var(--first-background-color)"/>
                             <Tooltip/>
                             <Line type="monotone" dataKey="score" stroke="var(--first-color)" strokeWidth={3}/>
                         </LineChart>

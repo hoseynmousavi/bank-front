@@ -39,12 +39,12 @@ const faTextConstant = {
 
     bankChartTitle: "نمودار نمره‌ کل در طول زمان",
 
-    bankIndicatorTitle: "نسبت درآمد تسهيلات به هزينه‌ی سود سپرده",
-    bankIndicatorDesc: "استخراج از صورت‌های مالی",
-
     indicatorDesc: "توضیحات شاخص",
-    indicatorCount: "حسابرسی شده",
+    indicatorCount: "",
     indicatorWeight: "وزن: ",
+
+    audited: "حسابرسی شده",
+    notAudited: "حسابرسی نشده",
 }
 
 export default faTextConstant

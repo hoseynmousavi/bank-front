@@ -4,12 +4,12 @@ import {CartesianGrid, Line, LineChart, Tooltip, XAxis, YAxis} from "recharts"
 import {useEffect, useRef, useState} from "react"
 import faTextConstant from "../../constant/faTextConstant"
 import ArrowSvg from "../../media/svg/ArrowSvg"
-import dataCons from "../../constant/dataCons"
 import getImage from "../../helpers/getImage"
 import Link from "../../seyed-modules/components/Link"
 import urlConstant from "../../constant/urlConstant"
+import showNumber from "../../helpers/showNumber"
 
-function BanksPageListItem({data: {_id, logo, name, type, established_year, total_score, deposit_amount, major_shareholders, employees_numbers, basic_capital, branches_number, score_chart}})
+function BanksPageListItem({data: {_id, logo, name, type, total_score, total_score_chart}})
 {
     const [isChartVisible, setIsChartVisible] = useState(false)
     const contRef = useRef(null)
@@ -47,12 +47,12 @@ function BanksPageListItem({data: {_id, logo, name, type, established_year, tota
                 <div className={`banks-page-list-btn-content ${isChartVisible && "hide"}`}>
                     <div>
                         {faTextConstant.point}
-                        {total_score}/۱۰
+                        {showNumber(total_score, 1)}/۱۰
                     </div>
                     <ArrowSvg className="banks-page-list-btn-icon"/>
                 </div>
                 <div className={`banks-page-list-item-chart ${!isChartVisible && "hide"}`} style={{height: isChartVisible ? height : "0"}}>
-                    <LineChart width={width} height={height} data={dataCons} margin={{right: 40, top: 32}}>
+                    <LineChart width={width} height={height} data={total_score_chart} margin={{right: 40, top: 32}}>
                         <CartesianGrid stroke="var(--first-background-color)" strokeDasharray="5 5"/>
                         <XAxis stroke="white" dataKey="name"/>
                         <YAxis stroke="white"/>

@@ -2,6 +2,7 @@
   margin-top: var(--header-height);
   padding: 0 var(--mobile-first-solid-padding);
   background-color: var(--second-background-color);
+  min-height: var(--full-height);
 }
 
 .banks-page-desc {
@@ -72,7 +73,7 @@
   margin-top: 16px;
   flex-direction: column;
   align-items: flex-start;
-  transition: height var(--first-transition);
+  transition: height var(--first-transition), font-size var(--first-transition);
 
   &.chart {
     font-size: var(--regular-font);
@@ -106,6 +107,10 @@
   direction: ltr;
   background-color: var(--first-text-color);
   transition: height var(--first-transition), opacity var(--first-transition);
+
+  p {
+    color: var(--first-color);
+  }
 
   &.hide {
     opacity: 0;
