@@ -6,8 +6,9 @@ import {useEffect, useRef, useState} from "react"
 import urlConstant from "../../constant/urlConstant"
 import Link from "../../seyed-modules/components/Link"
 
-function BankPageIndicator({data: {score_chart, percent, indicator: {_id, title, description}}})
+function BankPageIndicator({data: {score_chart, indicator: {_id, title, description}}})
 {
+    const percent = (score_chart[score_chart.length - 1] ?? 0) * 100
     const [isChartVisible, setIsChartVisible] = useState(false)
     const contRef = useRef(null)
     const [width, setWidth] = useState(0)

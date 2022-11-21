@@ -11,14 +11,24 @@ import getImage from "../../helpers/getImage"
 import Link from "../../seyed-modules/components/Link"
 import urlConstant from "../../constant/urlConstant"
 import showNumber from "../../helpers/showNumber"
+import {useState} from "react"
 
 function BankPage({route: {match: {params: {id}}}})
 {
+    const [searchValue, setSearchValue] = useState("")
     const {data} = GetBank({_id: id})
     const {
         logo, name, type, established_year, deposit_amount, major_shareholders, employees_numbers, basic_capital, branches_number,
         bankIndicator, total_score, total_score_chart,
     } = data
+
+    const showBankIndicator = bankIndicator.filter(item => item?.indicator?.title.includes(searchValue))
+
+    function onSearch({value})
+    {
+        setSearchValue(value.trim())
+    }
+
     return (
         <>
             <div className="banks-page">
@@ -47,12 +57,15 @@ function BankPage({route: {match: {params: {id}}}})
                     <div className="bank-page-chart-title">{faTextConstant.bankChartTitle}</div>
                     <BankPageChart score_chart={total_score_chart}/>
                 </div>
-                <Input className="bank-page-search" name="search" Icon={SearchSvg} iconClassName="banks-page-search-icon" placeholder={faTextConstant.bankPageSearch}/>
+                <Input className="bank-page-search" name="search" Icon={SearchSvg} iconClassName="banks-page-search-icon" placeholder={faTextConstant.bankPageSearch} onChange={onSearch}/>
                 <div className="bank-page-indicators">
                     {
-                        bankIndicator.map(item =>
-                            <BankPageIndicator key={item._id} data={item}/>,
-                        )
+                        showBankIndicator?.length > 0 ?
+                            showBankIndicator.map(item =>
+                                <BankPageIndicator key={item._id} data={item}/>,
+                            )
+                            :
+                            <div>نتیجه‌ای یافت نشد</div>
                     }
                 </div>
             </div>
