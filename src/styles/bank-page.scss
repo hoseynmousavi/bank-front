@@ -103,7 +103,7 @@
 }
 
 .bank-page-indicator-item {
-  background-color: var(--first-background-color);
+  background-color: var(--box-color);
   box-shadow: var(--first-shadow);
   border-radius: var(--second-radius);
   padding: 28px 32px;
@@ -139,7 +139,7 @@
 .bank-page-indicator-item-first-btn {
   border-radius: var(--first-radius);
   border: 2px solid var(--first-text-color);
-  background-color: var(--first-background-color) !important;
+  background-color: var(--box-color) !important;
   color: var(--first-text-color);
   width: 200px;
   margin-left: 16px;

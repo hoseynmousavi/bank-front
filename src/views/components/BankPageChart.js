@@ -1,6 +1,5 @@
 import {CartesianGrid, Line, LineChart, Tooltip, XAxis, YAxis} from "recharts"
 import {useEffect, useRef, useState} from "react"
-import dataCons from "../../constant/dataCons"
 
 function BankPageChart({score_chart})
 {

@@ -1,7 +1,7 @@
 .banks-page {
   margin-top: var(--header-height);
   padding: 0 var(--mobile-first-solid-padding);
-  background-color: var(--second-background-color);
+  background-color: var(--first-background-color);
   min-height: var(--full-height);
 }
 
@@ -26,7 +26,7 @@
 }
 
 .banks-page-list-item {
-  background-color: var(--first-background-color);
+  background-color: var(--box-color);
   box-shadow: var(--first-shadow);
   border-radius: var(--second-radius);
   padding: 16px;

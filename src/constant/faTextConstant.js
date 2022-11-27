@@ -45,6 +45,12 @@ const faTextConstant = {
 
     audited: "حسابرسی شده",
     notAudited: "حسابرسی نشده",
+
+    percent: " درصد",
+
+    panelDashboard: "داشبورد",
+    panelBanks: "بانک‌ها",
+    panelIndicators: "شاخص‌ها",
 }
 
 export default faTextConstant

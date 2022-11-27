@@ -1,5 +1,5 @@
 const urlConstant = {
-    whatIsRanking: "/ranking",
+    whatIsRanking: "/",
 
     bank: id => `/bank/${id}`,
     banks: "/banks",
@@ -10,6 +10,10 @@ const urlConstant = {
     aboutUs: "/about-us",
 
     contactUs: "/contact-us",
+
+    panel: "/panel",
+    panelLogin: "/panel/login",
+    panelDashboard: "/panel/dashboard",
 }
 
 export default urlConstant

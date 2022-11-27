@@ -7,7 +7,7 @@ import GetIndicator from "../../hooks/GetIndicator"
 
 function IndicatorPage({route: {match: {params: {id}}}})
 {
-    const {data} = GetIndicator({_id: id})
+    const {data, banks} = GetIndicator({_id: id})
     const {title, description, full_description, weight} = data || {}
 
     return (
@@ -25,15 +25,11 @@ function IndicatorPage({route: {match: {params: {id}}}})
                 </div>
                 <Input className="banks-page-search" name="search" Icon={SearchSvg} iconClassName="banks-page-search-icon" placeholder={faTextConstant.bankPageSearch}/>
                 <div className="banks-page-list">
-                    <IndicatorPageListItem/>
-                    <IndicatorPageListItem/>
-                    <IndicatorPageListItem/>
-                    <IndicatorPageListItem/>
-                    <IndicatorPageListItem/>
-                    <IndicatorPageListItem/>
-                    <IndicatorPageListItem/>
-                    <IndicatorPageListItem/>
-                    <IndicatorPageListItem/>
+                    {
+                        banks.map(item =>
+                            <IndicatorPageListItem key={item._id} data={item}/>,
+                        )
+                    }
                     <div className="banks-page-list-item hidden"/>
                     <div className="banks-page-list-item hidden"/>
                 </div>

@@ -1,0 +1,35 @@
+.panel-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--full-height);
+  user-select: none;
+}
+
+.panel-login-box {
+  width: 450px;
+  padding: 48px;
+  box-shadow: var(--first-shadow);
+  border-radius: var(--second-radius);
+
+  label {
+    color: var(--first-color);
+  }
+
+  input {
+    &::placeholder {
+      color: var(--second-text-color) !important;
+    }
+  }
+}
+
+.panel-login-box-logo {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  margin: 0 auto 72px;
+}
+
+.panel-login-box-btn {
+  margin-top: 72px;
+}

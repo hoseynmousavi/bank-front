@@ -54,7 +54,7 @@ function BankPageIndicator({data: {score_chart, indicator: {_id, title, descript
                         }}
                         onClick={toggleChart}>
                     <div className={`banks-page-list-btn-content ${isChartVisible && "hide"}`}>
-                        <div>{percent} درصد</div>
+                        <div>{percent}{faTextConstant.percent}</div>
                         <ArrowSvg className="bank-page-indicator-item-second-btn-icon"/>
                     </div>
                     <div className={`banks-page-list-item-chart ${!isChartVisible && "hide"}`} style={{height: isChartVisible ? height : "0"}}>
