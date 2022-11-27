@@ -2,6 +2,7 @@ import {useContext} from "react"
 import {BankContext} from "../context/bank/BankReducer"
 import {IndicatorContext} from "../context/indicator/IndicatorReducer"
 import {BankIndicatorContext} from "../context/bankIndicator/BankIndicatorReducer"
+import showNumber from "../helpers/showNumber"
 
 function GetBank({_id})
 {
@@ -23,7 +24,7 @@ function GetBank({_id})
             }
         }
     }
-    total_score_chart = total_score_chart.map(item => ({...item, score: item.score / item.weight}))
+    total_score_chart = total_score_chart.map(item => ({...item, score: showNumber(item.score / item.weight, 1)}))
     const total_score = total_score_chart[total_score_chart.length - 1]?.score ?? 0
 
     data.bankIndicator = bankIndicator

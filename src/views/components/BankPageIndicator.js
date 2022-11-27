@@ -8,7 +8,7 @@ import Link from "../../seyed-modules/components/Link"
 
 function BankPageIndicator({data: {score_chart, indicator: {_id, title, description}}})
 {
-    const percent = (score_chart[score_chart.length - 1] ?? 0) * 100
+    const percent = (score_chart[score_chart.length - 1]?.score ?? 0) * 10
     const [isChartVisible, setIsChartVisible] = useState(false)
     const contRef = useRef(null)
     const [width, setWidth] = useState(0)
@@ -61,7 +61,7 @@ function BankPageIndicator({data: {score_chart, indicator: {_id, title, descript
                         <LineChart width={width} height={height} data={score_chart} margin={{right: 40, top: 32}}>
                             <CartesianGrid stroke="var(--first-background-color)" strokeDasharray="5 5"/>
                             <XAxis stroke="var(--first-background-color)" dataKey="name"/>
-                            <YAxis stroke="var(--first-background-color)"/>
+                            <YAxis ticks={[2, 4, 6, 8, 10]} stroke="var(--first-background-color)"/>
                             <Tooltip/>
                             <Line type="monotone" dataKey="score" stroke="var(--first-color)" strokeWidth={3}/>
                         </LineChart>

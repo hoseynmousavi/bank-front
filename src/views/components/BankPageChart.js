@@ -26,7 +26,7 @@ function BankPageChart({score_chart})
             <LineChart width={width} height={height} data={score_chart} margin={{right: 0, top: 16}}>
                 <CartesianGrid stroke="var(--first-border-color)"/>
                 <XAxis stroke="var(--first-border-color)" dataKey="name"/>
-                <YAxis stroke="var(--first-border-color)"/>
+                <YAxis ticks={[2, 4, 6, 8, 10]} stroke="var(--first-border-color)"/>
                 <Tooltip/>
                 <Line type="monotone" dataKey="score" stroke="var(--first-color)" strokeWidth={3}/>
             </LineChart>
