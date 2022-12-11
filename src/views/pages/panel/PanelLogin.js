@@ -1,12 +1,12 @@
-import ImageShow from "../../seyed-modules/components/ImageShow"
-import logo from "../../media/images/logo.png"
-import Input from "../components/Input"
-import Button from "../../seyed-modules/components/Button"
+import ImageShow from "../../../seyed-modules/components/ImageShow"
+import logo from "../../../media/images/logo.png"
+import Input from "../../components/Input"
+import Button from "../../../seyed-modules/components/Button"
 import {useContext, useState} from "react"
-import AuthActions from "../../context/auth/AuthActions"
-import {AuthContext} from "../../context/auth/AuthReducer"
-import toastManager from "../../seyed-modules/helpers/toastManager"
-import {FAIL_TOAST, SUCCESS_TOAST} from "../../seyed-modules/constant/toastTypes"
+import AuthActions from "../../../context/auth/AuthActions"
+import {AuthContext} from "../../../context/auth/AuthReducer"
+import toastManager from "../../../seyed-modules/helpers/toastManager"
+import {FAIL_TOAST, SUCCESS_TOAST} from "../../../seyed-modules/constant/toastTypes"
 
 function PanelLogin()
 {

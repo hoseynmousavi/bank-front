@@ -6,13 +6,13 @@ import {IndicatorContext} from "../context/indicator/IndicatorReducer"
 
 function GetBanks()
 {
-    const {state: {results: bankIndicatorResults}} = useContext(BankIndicatorContext)
-    const {state: {results: indicatorResults}} = useContext(IndicatorContext)
-    const {state: {keys, results, getListDone}, dispatch} = useContext(BankContext)
-    const isLoading = !getListDone
-    const data = keys?.length > 0 ? keys.reduce((sum, item) => [...sum, results[item]], []) : []
+    const {state: {results: bankIndicatorResults, getListDone: getInBa}} = useContext(BankIndicatorContext)
+    const {state: {results: indicatorResults, getListDone: getIndicators}} = useContext(IndicatorContext)
+    const {state: {keys, results, getListDone: getBanks}, dispatch} = useContext(BankContext)
+    const isLoading = !getBanks || !getIndicators || !getInBa
+    const data = !isLoading ? keys.reduce((sum, item) => [...sum, results[item]], []) : []
 
-    if (data.length)
+    if (!isLoading)
     {
         for (let k = 0; k < data.length; k++)
         {

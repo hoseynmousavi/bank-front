@@ -1,5 +1,6 @@
 @import "../seyed-modules/styles/index";
 
+@import "common";
 @import "animations";
 @import "input";
 @import "header";
@@ -9,6 +10,8 @@
 @import "indicator-page";
 @import "panel-login";
 @import "panel-side";
+@import "panel-dashboard";
+@import "ranking";
 
 body {
   background-color: var(--first-background-color) !important;

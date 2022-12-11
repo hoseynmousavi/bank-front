@@ -3,11 +3,24 @@ import logo from "../../media/images/logo.png"
 import faTextConstant from "../../constant/faTextConstant"
 import HeaderItem from "../components/HeaderItem"
 import urlConstant from "../../constant/urlConstant"
+import ScrollY from "../../seyed-modules/hooks/ScrollY"
+import {useState} from "react"
+import GetCurrentLocation from "../../seyed-modules/hooks/GetCurrentLocation"
 
 function Header()
 {
+    const [isFixed, setIsFixed] = useState(false)
+    const {location} = GetCurrentLocation()
+
+    function condition({scrollTop})
+    {
+        setIsFixed(scrollTop > 0)
+    }
+
+    ScrollY({condition, updateParams: [location], timeout: 300})
+
     return (
-        <header className="header">
+        <header className={`header ${isFixed ? "fixed" : ""}`}>
             <ImageShow src={logo} className="header-logo"/>
             <div className="header-content">
                 <HeaderItem text={faTextConstant.whatIsRanking} link={urlConstant.whatIsRanking}/>

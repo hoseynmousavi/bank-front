@@ -19,7 +19,7 @@ function IndicatorsPage()
 
     return (
         <>
-            <div className="banks-page">
+            <div className="page">
                 <p className="banks-page-desc">{faTextConstant.indicatorsPageDesc}</p>
                 <Input className="banks-page-search" name="search" Icon={SearchSvg} iconClassName="banks-page-search-icon" placeholder={faTextConstant.bankPageSearch} onChange={onSearch}/>
                 <div className="bank-page-indicators">

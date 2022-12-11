@@ -31,7 +31,7 @@ function BankPage({route: {match: {params: {id}}}})
 
     return (
         <>
-            <div className="banks-page">
+            <div className="page">
                 <div className="bank-page-header">
                     <Link to={urlConstant.banks} className="bank-page-header-title">{faTextConstant.banks}</Link>
                     <ArrowSvg className="bank-page-header-arrow"/>

@@ -1,0 +1,115 @@
+.ranking-page-main {
+  padding: var(--header-height) var(--mobile-first-solid-padding) 0;
+  height: calc(var(--full-height) - 90px);
+  display: flex;
+  align-items: center;
+  background-image: url("../media/images/back.png");
+  background-size: cover;
+}
+
+.ranking-page-main-title {
+  font-size: var(--giant-font);
+  color: var(--first-color);
+  font-family: "my-font-bold", serif;
+}
+
+.ranking-page-main-desc {
+  font-size: var(--large-font);
+  color: var(--second-text-color);
+  font-family: "my-font", serif;
+  margin: 16px 0;
+  text-align: justify;
+  text-align-last: start;
+}
+
+.ranking-page-main-btn {
+  padding: 8px 16px;
+  border-radius: var(--first-radius);
+  display: flex;
+  align-items: center;
+  font-size: var(--title-font);
+}
+
+.ranking-page-main-btn-icon {
+  width: 14px;
+  height: 14px;
+  transform: rotate(90deg);
+  margin-inline-start: 8px;
+
+  path {
+    fill: var(--first-text-color);
+  }
+}
+
+.ranking-page-main-first {
+  width: 615px;
+}
+
+.ranking-page-main-second {
+  flex-grow: 1;
+  text-align: left;
+  margin-top: auto;
+  height: 100%;
+}
+
+.ranking-page-main-second-img {
+  display: block;
+  height: 100%;
+  object-fit: contain;
+  margin-right: auto !important;
+}
+
+.ranking-page-banks {
+  height: 90px;
+  background-color: var(--first-text-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.ranking-page-banks-item {
+  display: block;
+  object-fit: contain;
+  height: 80%;
+  width: auto;
+  aspect-ratio: 1 / 1;
+
+  img {
+    height: 100%;
+    filter: grayscale(100);
+  }
+}
+
+.ranking-page-banners {
+  display: flex;
+  flex-wrap: wrap;
+  padding: var(--mobile-first-solid-padding);
+}
+
+.ranking-page-banners-item {
+  display: inline-block;
+  vertical-align: top;
+  border-radius: var(--second-radius);
+
+  &.index-1 {
+    width: 100%;
+  }
+
+  &.index-2 {
+    margin-top: 32px;
+    width: 65%;
+    margin-inline-end: 32px;
+  }
+
+  &.index-3 {
+    margin-top: 32px;
+    width: calc(35% - 32px);
+  }
+
+  img {
+    display: block;
+    width: 100% !important;
+    height: 100%;
+    object-fit: cover;
+  }
+}

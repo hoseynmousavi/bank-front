@@ -51,6 +51,35 @@ const faTextConstant = {
     panelDashboard: "داشبورد",
     panelBanks: "بانک‌ها",
     panelIndicators: "شاخص‌ها",
+
+    manageBanners: "مدیریت بنرها",
+    addBank: "افزودن بانک جدید",
+    addIndicator: "افزودن شاخص",
+
+    whatIsRankingTitle: "رتبه‌بندی بانک‌های ایران چیست و چگونه انجام می‌شود؟",
+    whatIsRankingDesc: "چکیده‌ای از اینکه رتبه‌بندی چیست و چگونه انجام می‌شود. چکیده‌ای از اینکه رتبه‌بندی چیست و چگونه انجام می‌شود. چکیده‌ای از اینکه کیده‌ای از اینکه رتبه‌بندی چیست و چگونه انجام می‌شود. چکیده‌ای از اینکه رتبه‌بندی چیست.",
+
+    showCompleteText: "مشاهده متن کامل",
+
+    bankInfo: "اطلاعات بانک",
+    chooseBank: "انتخاب بانک",
+    bankName: "نام بانک",
+
+    indicatorName: "نام شاخص",
+    weight: "وزن شاخص",
+    auditStat: "وضعیت حسابرسی",
+    description: "توضیحات",
+    fullDescription: "توضیحات کامل",
+    editRemove: "حذف / ویرایش",
+
+    chooseBankLogo: "بارگزاری لوگوی بانک:",
+    chooseFile: "انتخاب فایل",
+
+    indicatorsList: "لیست شاخص‌ها",
+
+    submit: "ثبت",
+
+    rUSure: "آیا مطمئن هستید؟",
 }
 
 export default faTextConstant

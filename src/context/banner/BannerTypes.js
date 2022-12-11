@@ -1,0 +1,2 @@
+export const GET_BANNERS = "GET_BANNERS"
+export const UPDATE_BANNER = "UPDATE_BANNER"

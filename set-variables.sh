@@ -66,6 +66,7 @@ sed -i "s~TITLE_FONT~$REACT_APP_TITLE_FONT~g" build/index.html
 sed -i "s~LARGE_FONT~$REACT_APP_LARGE_FONT~g" build/index.html
 sed -i "s~BIG_FONT~$REACT_APP_BIG_FONT~g" build/index.html
 sed -i "s~HUGE_FONT~$REACT_APP_HUGE_FONT~g" build/index.html
+sed -i "s~GIANT_FONT~$REACT_APP_GIANT_FONT~g" build/index.html
 sed -i "s~NAME~$REACT_APP_NAME~g" build/manifest.json
 sed -i "s~DESCRIPTION~$REACT_APP_DESCRIPTION~g" build/manifest.json
 sed -i "s~FIRST_BACKGROUND_COLOR~$REACT_APP_FIRST_BACKGROUND_COLOR~g" build/manifest.json

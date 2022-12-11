@@ -14,6 +14,8 @@ const urlConstant = {
     panel: "/panel",
     panelLogin: "/panel/login",
     panelDashboard: "/panel/dashboard",
+    panelBanks: "/panel/banks",
+    panelIndicators: "/panel/indicators",
 }
 
 export default urlConstant

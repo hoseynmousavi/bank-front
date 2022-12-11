@@ -1,3 +1,4 @@
+import {lazy} from "react"
 import ToastContainer from "./seyed-modules/components/ToastContainer"
 import ThemeColorBar from "./seyed-modules/components/ThemeColorBar"
 import Switch from "./seyed-modules/components/Switch"
@@ -7,8 +8,9 @@ import GetIndicators from "./hooks/GetIndicators"
 import GetBanks from "./hooks/GetBanks"
 import GetBankIndicators from "./hooks/GetBankIndicators"
 import LoadingWrapper from "./seyed-modules/components/LoadingWrapper"
-import Home from "./views/containers/Home"
-import Panel from "./views/containers/Panel"
+
+const Home = lazy(() => import("./views/containers/Home"))
+const Panel = lazy(() => import("./views/containers/panel/Panel"))
 
 function App()
 {

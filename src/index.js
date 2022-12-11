@@ -14,6 +14,7 @@ import LanguageProvider from "./seyed-modules/context/language/LanguageReducer"
 import BankProvider from "./context/bank/BankReducer"
 import IndicatorProvider from "./context/indicator/IndicatorReducer"
 import BankIndicatorProvider from "./context/bankIndicator/BankIndicatorReducer"
+import BannerProvider from "./context/banner/BannerReducer"
 
 const root = createRoot(document.getElementById("root"))
 
@@ -26,7 +27,9 @@ root.render(
                 <BankIndicatorProvider>
                     <BankProvider>
                         <IndicatorProvider>
-                            <WrappedApp/>
+                            <BannerProvider>
+                                <WrappedApp/>
+                            </BannerProvider>
                         </IndicatorProvider>
                     </BankProvider>
                 </BankIndicatorProvider>

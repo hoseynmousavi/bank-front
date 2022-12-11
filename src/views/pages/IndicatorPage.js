@@ -12,7 +12,7 @@ function IndicatorPage({route: {match: {params: {id}}}})
 
     return (
         <>
-            <div className="banks-page">
+            <div className="page">
                 <div className="indicator-page-box">
                     <div className="indicator-page-box-header">
                         <div>

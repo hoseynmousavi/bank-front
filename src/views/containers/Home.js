@@ -21,7 +21,6 @@ function Home()
                 <Route path={urlConstant.bank(":id")} render={route => <BankPage route={route}/>}/>
                 <Route path={urlConstant.banks} render={() => <BanksPage/>}/>
                 <Route path={urlConstant.whatIsRanking} render={() => <RankingPage/>}/>
-                <Route path="*" render={() => <div style={{width: "100%", height: "var(--full-height)", display: "flex", justifyContent: "center", alignItems: "center"}}>NOT FOUND</div>}/>
             </Switch>
         </>
     )

@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--first-background-color);
+  background-color: transparent;
   position: fixed;
   z-index: var(--header-z-index);
   top: 0;
@@ -10,6 +10,11 @@
   right: 0;
   height: var(--header-height);
   padding: 0 var(--mobile-first-solid-padding);
+  transition: background-color ease 0.2s;
+
+  &.fixed {
+    background-color: var(--first-background-color);
+  }
 
   &:after {
     content: "";

@@ -19,7 +19,7 @@ function BanksPage()
 
     return (
         <>
-            <div className="banks-page">
+            <div className="page">
                 <p className="banks-page-desc">{faTextConstant.banksPageDesc}</p>
                 <Input className="banks-page-search" name="search" Icon={SearchSvg} iconClassName="banks-page-search-icon" placeholder={faTextConstant.banksPageSearch} onChange={onSearch}/>
                 <div className="banks-page-list">

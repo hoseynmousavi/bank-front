@@ -1,0 +1,5 @@
+.page {
+  padding: var(--header-height) var(--mobile-first-solid-padding) 0;
+  background-color: var(--first-background-color);
+  min-height: calc(var(--full-height) - var(--header-height));
+}

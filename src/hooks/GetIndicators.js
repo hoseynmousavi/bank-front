@@ -6,7 +6,7 @@ function GetIndicators()
 {
     const {state: {keys, results, getListDone}, dispatch} = useContext(IndicatorContext)
     const isLoading = !getListDone
-    const data = keys?.length > 0 ? keys.reduce((sum, item) => [...sum, results[item]], []) : []
+    const data = !isLoading ? keys.reduce((sum, item) => [...sum, results[item]], []) : []
 
     useEffect(() =>
     {

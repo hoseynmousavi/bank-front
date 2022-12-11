@@ -1,8 +1,9 @@
 const apiUrlsConstant = {
     login: "login",
-    getBank: "bank",
-    getIndicator: "indicator",
+    bank: "bank",
+    indicator: "indicator",
     getBankIndicator: "bank-indicator",
+    banner: "banner",
 }
 
 export default apiUrlsConstant
