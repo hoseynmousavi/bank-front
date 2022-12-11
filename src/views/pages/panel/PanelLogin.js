@@ -41,8 +41,8 @@ function PanelLogin()
         <div className="panel-login">
             <div className="panel-login-box">
                 <ImageShow className="panel-login-box-logo" src={logo}/>
-                <Input name="username" label="نام کاربری" placeholder="نام کاربری شما" onChange={onChange}/>
-                <Input type="password" name="password" label="رمز عبور" placeholder="رمز عبور شما" onChange={onChange}/>
+                <Input name="username" label="نام کاربری" placeholder="نام کاربری شما" onChange={onChange} disableSubmit={isDisable} disabled={isLoading}/>
+                <Input type="password" name="password" label="رمز عبور" placeholder="رمز عبور شما" onChange={onChange} onSubmit={login} disableSubmit={isDisable} disabled={isLoading}/>
                 <Button loading={isLoading} disable={isDisable} className="panel-login-box-btn" onClick={login}>
                     ورود به داشبورد
                 </Button>
