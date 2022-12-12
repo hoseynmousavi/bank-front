@@ -6,6 +6,7 @@ import urlConstant from "../../constant/urlConstant"
 import ScrollY from "../../seyed-modules/hooks/ScrollY"
 import {useState} from "react"
 import GetCurrentLocation from "../../seyed-modules/hooks/GetCurrentLocation"
+import Link from "../../seyed-modules/components/Link"
 
 function Header()
 {
@@ -21,13 +22,15 @@ function Header()
 
     return (
         <header className={`header ${isFixed ? "fixed" : ""}`}>
-            <ImageShow src={logo} className="header-logo"/>
+            <Link to={urlConstant.home}>
+                <ImageShow src={logo} className="header-logo"/>
+            </Link>
             <div className="header-content">
                 <HeaderItem text={faTextConstant.whatIsRanking} link={urlConstant.whatIsRanking}/>
                 <HeaderItem text={faTextConstant.banks} link={urlConstant.banks}/>
                 <HeaderItem text={faTextConstant.indicator} link={urlConstant.indicators}/>
                 <HeaderItem text={faTextConstant.aboutUs} link={urlConstant.aboutUs}/>
-                <HeaderItem text={faTextConstant.contactUs} link={urlConstant.contactUs}/>
+                {/*<HeaderItem text={faTextConstant.contactUs} link={urlConstant.contactUs}/>*/}
             </div>
             <div className="header-logo"/>
         </header>

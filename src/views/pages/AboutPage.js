@@ -1,14 +1,14 @@
 import faTextConstant from "../../constant/faTextConstant"
 
-function RankingPage()
+function AboutPage()
 {
     return (
         <div className="page">
             <div className="banks-page-desc">
-                {faTextConstant.whatIsRankingPage}
+                {faTextConstant.footerAbout}
             </div>
         </div>
     )
 }
 
-export default RankingPage
+export default AboutPage

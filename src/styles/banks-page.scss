@@ -4,6 +4,9 @@
   color: var(--second-text-color);
   font-size: var(--large-font);
   margin-top: 16px;
+  line-height: var(--first-line-height);
+  text-align: justify;
+  text-align-last: start;
 }
 
 .banks-page-search {

@@ -1,5 +1,6 @@
 const urlConstant = {
-    whatIsRanking: "/",
+    home: "/",
+    whatIsRanking: "/ranking",
 
     bank: id => `/bank/${id}`,
     banks: "/banks",

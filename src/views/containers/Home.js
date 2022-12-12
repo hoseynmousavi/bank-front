@@ -8,7 +8,9 @@ const IndicatorPage = lazy(() => import("../pages/IndicatorPage"))
 const IndicatorsPage = lazy(() => import("../pages/IndicatorsPage"))
 const BankPage = lazy(() => import("../pages/BankPage"))
 const BanksPage = lazy(() => import("../pages/BanksPage"))
+const HomePage = lazy(() => import("../pages/HomePage"))
 const RankingPage = lazy(() => import("../pages/RankingPage"))
+const AboutPage = lazy(() => import("../pages/AboutPage"))
 
 function Home()
 {
@@ -20,7 +22,9 @@ function Home()
                 <Route path={urlConstant.indicators} render={() => <IndicatorsPage/>}/>
                 <Route path={urlConstant.bank(":id")} render={route => <BankPage route={route}/>}/>
                 <Route path={urlConstant.banks} render={() => <BanksPage/>}/>
+                <Route path={urlConstant.aboutUs} render={() => <AboutPage/>}/>
                 <Route path={urlConstant.whatIsRanking} render={() => <RankingPage/>}/>
+                <Route path={urlConstant.home} render={() => <HomePage/>}/>
             </Switch>
         </>
     )
