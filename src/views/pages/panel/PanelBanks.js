@@ -13,6 +13,7 @@ import {BankContext} from "../../../context/bank/BankReducer"
 import {BankIndicatorContext} from "../../../context/bankIndicator/BankIndicatorReducer"
 import toastManager from "../../../seyed-modules/helpers/toastManager"
 import {SUCCESS_TOAST} from "../../../seyed-modules/constant/toastTypes"
+import PanelBankIndicatorBox from "../../components/panel/PanelBankIndicatorBox"
 
 function PanelBanks()
 {
@@ -77,23 +78,26 @@ function PanelBanks()
 
                     {
                         bankId !== "0" &&
-                        <div key={bank._id} className="panel-bank">
-                            <div className="panel-bank-info">
-                                <div className="panel-bank-info-title">{faTextConstant.bankInfo}</div>
-                                <PanelBankRow field="type" bank={bank}/>
-                                <PanelBankRow field="total_score" bank={bank}/>
-                                <PanelBankRow field="established_year" bank={bank}/>
-                                <PanelBankRow field="deposit_amount" bank={bank}/>
-                                <PanelBankRow field="employees_numbers" bank={bank}/>
-                                <PanelBankRow field="branches_number" bank={bank}/>
-                                <PanelBankRow field="basic_capital" bank={bank}/>
-                                <PanelBankRow field="major_shareholders" bank={bank}/>
+                        <>
+                            <div key={bank._id} className="panel-bank">
+                                <div className="panel-bank-info">
+                                    <div className="panel-bank-info-title">{faTextConstant.bankInfo}</div>
+                                    <PanelBankRow field="type" bank={bank}/>
+                                    <PanelBankRow field="total_score" bank={bank}/>
+                                    <PanelBankRow field="established_year" bank={bank}/>
+                                    <PanelBankRow field="deposit_amount" bank={bank}/>
+                                    <PanelBankRow field="employees_numbers" bank={bank}/>
+                                    <PanelBankRow field="branches_number" bank={bank}/>
+                                    <PanelBankRow field="basic_capital" bank={bank}/>
+                                    <PanelBankRow field="major_shareholders" bank={bank}/>
+                                </div>
+                                <div className="panel-bank-info second">
+                                    <div className="panel-bank-info-title">{faTextConstant.bankChartTitle}</div>
+                                    <PanelBankChart bank={bank}/>
+                                </div>
                             </div>
-                            <div className="panel-bank-info second">
-                                <div className="panel-bank-info-title">{faTextConstant.bankChartTitle}</div>
-                                <PanelBankChart bank={bank}/>
-                            </div>
-                        </div>
+                            <PanelBankIndicatorBox bank={bank}/>
+                        </>
                     }
 
                 </div>

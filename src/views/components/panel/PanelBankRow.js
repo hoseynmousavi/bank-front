@@ -13,7 +13,7 @@ function PanelBankRow({field, bank})
     const {dispatch} = useContext(BankContext)
     const defaultValue = bank[field]
     const [value, setValue] = useState(defaultValue)
-    const haveChanged = defaultValue !== value
+    const haveChanged = defaultValue?.toString?.() !== value?.toString?.()
     const [isLoading, setIsLoading] = useState(false)
 
     function onChange({target: {value}})

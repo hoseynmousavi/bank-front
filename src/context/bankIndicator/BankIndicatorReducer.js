@@ -1,5 +1,5 @@
 import {createContext, useReducer} from "react"
-import {GET_BANK_INDICATORS} from "./BankIndicatorTypes"
+import {ADD_BANK_INDICATORS, GET_BANK_INDICATORS, UPDATE_BANK_INDICATORS} from "./BankIndicatorTypes"
 import {REMOVE_INDICATOR} from "../indicator/IndicatorTypes"
 import {REMOVE_BANK} from "../bank/BankTypes"
 
@@ -25,6 +25,28 @@ function BankIndicatorProvider({children})
                     ...state,
                     results: data,
                     getListDone: true,
+                }
+            }
+            case ADD_BANK_INDICATORS:
+            {
+                const {res: {data}} = action.payload
+                return {
+                    ...state,
+                    results: [
+                        ...state.results,
+                        data,
+                    ],
+                }
+            }
+            case UPDATE_BANK_INDICATORS:
+            {
+                const {res: {data}} = action.payload
+                const results = [...state.results]
+                const index = results.findIndex(item => item._id === data._id)
+                results[index] = data
+                return {
+                    ...state,
+                    results,
                 }
             }
             case REMOVE_INDICATOR:

@@ -79,6 +79,14 @@ const faTextConstant = {
     submit: "ثبت",
 
     rUSure: "آیا مطمئن هستید؟",
+
+    editIndicatorInfo: "ویرایش اطلاعات",
+    addIndicatorInfo: "افزودن اطلاعات",
+
+    date: "تاریخ",
+    score: "نمره",
+
+    addField: "افزودن فیلد",
 }
 
 export default faTextConstant

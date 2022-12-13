@@ -226,9 +226,10 @@
   z-index: var(--modal-z-index);
   right: 50%;
   top: 50%;
+  max-height: var(--full-height);
   box-shadow: var(--first-shadow);
   border-radius: var(--first-radius);
-  overflow: hidden;
+  overflow: auto;
   width: 700px;
   transform: translate3d(50%, -50%, 0);
   animation: fade-in ease 0.2s;
@@ -273,9 +274,44 @@
   justify-content: space-between;
 }
 
+.panel-modal-content-add {
+  padding: 8px 16px;
+  font-family: "my-font-bold", serif;
+  margin-bottom: 16px;
+  border-radius: var(--first-radius);
+  cursor: pointer;
+  color: var(--first-color);
+  font-size: var(--large-font);
+  border: 2px solid var(--first-color);
+}
+
+.panel-modal-content-cont {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.panel-modal-content-cont-remove {
+  min-width: 32px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline-start: 16px;
+  cursor: pointer;
+}
+
+.panel-modal-content-cont-remove-icon {
+  width: 16px;
+  height: 16px;
+}
+
 .panel-modal-content-item {
   width: 48%;
   text-align: start;
+  margin-inline-end: 8px;
   margin-bottom: 32px;
 
   &.full {
