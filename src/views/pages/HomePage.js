@@ -17,6 +17,10 @@ import Bank6Svg from "../../media/svg/Bank6Svg"
 import Bank7Svg from "../../media/svg/Bank7Svg"
 import Bank8Svg from "../../media/svg/Bank8Svg"
 import Bank9Svg from "../../media/svg/Bank9Svg"
+import Bank10Svg from "../../media/svg/Bank10Svg"
+import Bank13Svg from "../../media/svg/Bank13Svg"
+import Bank12Svg from "../../media/svg/Bank12Svg"
+import Bank11Svg from "../../media/svg/Bank11Svg"
 
 function HomePage()
 {
@@ -48,6 +52,10 @@ function HomePage()
                 <Bank7Svg className="ranking-page-banks-item"/>
                 <Bank8Svg className="ranking-page-banks-item"/>
                 <Bank9Svg className="ranking-page-banks-item"/>
+                <Bank10Svg className="ranking-page-banks-item"/>
+                <Bank11Svg className="ranking-page-banks-item"/>
+                <Bank12Svg className="ranking-page-banks-item"/>
+                <Bank13Svg className="ranking-page-banks-item"/>
             </div>
             <div className="ranking-page-banners">
                 {
