@@ -31,7 +31,7 @@ function GetBanks()
                     }
                 }
             }
-            total_score_chart = total_score_chart.map(item => ({...item, score: item.score / item.weight}))
+            total_score_chart = total_score_chart.map(item => ({...item, score: +(item.score / item.weight).toFixed(2)}))
             const total_score = total_score_chart[total_score_chart.length - 1]?.score ?? 0
 
             bank.bankIndicator = bankIndicator

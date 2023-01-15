@@ -1,6 +1,6 @@
 import numberCorrection from "../../../seyed-modules/helpers/numberCorrection"
 
-function PanelAddModalInput({isFull, isArea, isDisable, text, onChange, type = "text", defaultValue})
+function PanelAddModalInput({isFull, isArea, isDisable, text, onChange, type = "text", defaultValue, ltr})
 {
     function onChangeFunc({target: {value}})
     {
@@ -15,7 +15,7 @@ function PanelAddModalInput({isFull, isArea, isDisable, text, onChange, type = "
                 isArea ?
                     <textarea className="panel-modal-content-item-input" rows={5} disabled={isDisable} onChange={onChangeFunc} defaultValue={defaultValue}/>
                     :
-                    <input className="panel-modal-content-item-input" type={type} disabled={isDisable} onChange={onChangeFunc} defaultValue={defaultValue}/>
+                    <input className={`panel-modal-content-item-input ${ltr ? "ltr" : ""}`} type={type} disabled={isDisable} onChange={onChangeFunc} defaultValue={defaultValue}/>
             }
         </div>
     )

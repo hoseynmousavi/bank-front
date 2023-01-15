@@ -18,7 +18,10 @@ function IndicatorPageItem({data: {_id, title, description, weight, is_audited},
                     !isPanel &&
                     <>
                         <div className="indicator-page-item-button-label count">{faTextConstant[is_audited ? "audited" : "notAudited"]}</div>
-                        <div className="indicator-page-item-button-label">{faTextConstant.indicatorWeight}{weight}</div>
+                        <div className="indicator-page-item-button-label">
+                            {faTextConstant.indicatorWeight}
+                            <div className="banks-page-list-btn-content-score margin">{weight}</div>
+                        </div>
                     </>
                 }
                 <Link to={!isPanel && urlConstant.indicator(_id)} onClick={onClick}>

@@ -32,7 +32,7 @@ function IndicatorPageListItem({data: {_id, name, logo, type, indicator}})
             <Link to={urlConstant.bank(_id)} className="indicator-page-list-item">
                 <ImageShow className="indicator-page-list-item-logo" src={getImage(logo)}/>
                 <div className="indicator-page-list-item-content">
-                    <div className="indicator-page-list-item-content-name">{faTextConstant.bank}{name}</div>
+                    <div className="indicator-page-list-item-content-name">{name}</div>
                     <div className="indicator-page-list-item-content-desc">{type}</div>
                 </div>
             </Link>

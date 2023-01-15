@@ -35,18 +35,18 @@ function BankPage({route: {match: {params: {id}}}})
                 <div className="bank-page-header">
                     <Link to={urlConstant.banks} className="bank-page-header-title">{faTextConstant.banks}</Link>
                     <ArrowSvg className="bank-page-header-arrow"/>
-                    <div className="bank-page-header-title">{faTextConstant.bank}{name}</div>
+                    <div className="bank-page-header-title">{name}</div>
                 </div>
                 <div className="bank-page-box">
                     <div className="bank-page-box-first">
-                        <div className="bank-page-box-first-title">{faTextConstant.bank}{name}</div>
+                        <div className="bank-page-box-first-title">{name}</div>
                         <ImageShow className="bank-page-box-first-logo" src={getImage(logo)}/>
                     </div>
                     <div className="bank-page-box-second">
                         <div className="bank-page-box-second-text">{faTextConstant.type}{type}</div>
                         <div className="bank-page-box-second-text">{faTextConstant.established_year}{established_year}</div>
-                        <div className="bank-page-box-second-text">{faTextConstant.total_score}{showNumber(total_score, 1)}</div>
-                        <div className="bank-page-box-second-text">{faTextConstant.deposit_amount}{showNumber(deposit_amount)}</div>
+                        <div className="bank-page-box-second-text">{faTextConstant.total_score}<div className="banks-page-list-btn-content-score">{total_score && (+total_score).toFixed(2)}</div></div>
+                        <div className="bank-page-box-second-text" title="هزار میلیارد تومان">{faTextConstant.deposit_amount}{showNumber(deposit_amount)}{faTextConstant.capitalUnit}</div>
                         <div className="bank-page-box-second-text">{faTextConstant.major_shareholders}{major_shareholders}</div>
                         <div className="bank-page-box-second-text">{faTextConstant.employees_numbers}{employees_numbers}</div>
                         <div className="bank-page-box-second-text">{faTextConstant.basic_capital}{basic_capital}{faTextConstant.capitalUnit}</div>

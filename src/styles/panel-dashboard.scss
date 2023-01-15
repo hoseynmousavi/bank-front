@@ -180,6 +180,10 @@
   width: 200px;
   transition: box-shadow ease 0.2s;
 
+  &.ltr {
+    direction: ltr;
+  }
+
   &:focus {
     box-shadow: var(--first-shadow);
   }
@@ -337,6 +341,10 @@
   align-items: center;
   resize: none;
 
+  &.ltr {
+    direction: ltr;
+  }
+
   &.checkbox {
     padding: 4px;
   }
@@ -426,6 +434,10 @@
       user-select: none;
       cursor: pointer;
     }
+  }
+
+  &.ltr {
+    direction: ltr;
   }
 
   &.sixth {

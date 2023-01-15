@@ -7,7 +7,6 @@ import ArrowSvg from "../../media/svg/ArrowSvg"
 import getImage from "../../helpers/getImage"
 import Link from "../../seyed-modules/components/Link"
 import urlConstant from "../../constant/urlConstant"
-import showNumber from "../../helpers/showNumber"
 
 function BanksPageListItem({data: {_id, logo, name, type, total_score, total_score_chart}})
 {
@@ -39,7 +38,7 @@ function BanksPageListItem({data: {_id, logo, name, type, total_score, total_sco
             <Link to={urlConstant.bank(_id)} className="banks-page-list-item-header">
                 <ImageShow className="banks-page-list-item-header-logo" src={getImage(logo)}/>
                 <div>
-                    <p className="banks-page-list-item-content-title">{faTextConstant.bank}{name}</p>
+                    <p className="banks-page-list-item-content-title">{name}</p>
                     <p className="banks-page-list-item-content-desc">{type}</p>
                 </div>
             </Link>
@@ -47,7 +46,7 @@ function BanksPageListItem({data: {_id, logo, name, type, total_score, total_sco
                 <div className={`banks-page-list-btn-content ${isChartVisible && "hide"}`}>
                     <div>
                         {faTextConstant.point}
-                        {showNumber(total_score, 1)}/۱۰
+                        <div className="banks-page-list-btn-content-score">{total_score.toFixed(2)}/10</div>
                     </div>
                     <ArrowSvg className="banks-page-list-btn-icon"/>
                 </div>

@@ -22,6 +22,10 @@
   &.count {
     color: var(--first-color);
   }
+
+  &.ltr {
+    direction: ltr;
+  }
 }
 
 .indicator-page-box {

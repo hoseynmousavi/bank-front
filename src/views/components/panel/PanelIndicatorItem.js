@@ -45,7 +45,7 @@ function PanelIndicatorItem({item, toggleUpdate})
     return (
         <div className="panel-table-row">
             <div className="panel-table-row-item first">{item.title}</div>
-            <div className="panel-table-row-item second">{item.weight}</div>
+            <div className="panel-table-row-item second ltr">{item.weight}</div>
             <div className="panel-table-row-item third">{item.is_audited ? faTextConstant.audited : faTextConstant.notAudited}</div>
             <div className="panel-table-row-item forth">{item.description}</div>
             <div className="panel-table-row-item fifth btn" onClick={toggleDesc}>{faTextConstant.showCompleteText}</div>

@@ -58,7 +58,7 @@ function PanelBanks()
                             <option value="0">{faTextConstant.chooseBank}</option>
                             {
                                 data.map(item =>
-                                    <option value={item._id} key={item._id}>{faTextConstant.bank}{item.name}</option>,
+                                    <option value={item._id} key={item._id}>{item.name}</option>,
                                 )
                             }
                         </select>
@@ -83,7 +83,7 @@ function PanelBanks()
                                 <div className="panel-bank-info">
                                     <div className="panel-bank-info-title">{faTextConstant.bankInfo}</div>
                                     <PanelBankRow field="type" bank={bank}/>
-                                    <PanelBankRow field="total_score" bank={bank}/>
+                                    <PanelBankRow field="total_score" bank={bank} ltr disable/>
                                     <PanelBankRow field="established_year" bank={bank}/>
                                     <PanelBankRow field="deposit_amount" bank={bank}/>
                                     <PanelBankRow field="employees_numbers" bank={bank}/>

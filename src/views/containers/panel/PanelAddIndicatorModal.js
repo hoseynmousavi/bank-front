@@ -86,7 +86,7 @@ function PanelAddIndicatorModal({close, update})
                 <div className="panel-modal-content">
                     <PanelAddModalInput isDisable={isLoading} text={faTextConstant.indicatorName} onChange={onInputChange("title")} defaultValue={values.title}/>
                     <PanelAddModalInput isDisable={isLoading} text={faTextConstant.description} onChange={onInputChange("description")} defaultValue={values.description}/>
-                    <PanelAddModalInput isDisable={isLoading} text={faTextConstant.weight} onChange={onInputChange("weight")} type="number" defaultValue={values.weight}/>
+                    <PanelAddModalInput isDisable={isLoading} text={faTextConstant.weight} onChange={onInputChange("weight")} type="number" defaultValue={values.weight} ltr/>
                     <PanelAddModalCheckbox isDisable={isLoading} text={faTextConstant.auditStat} onChange={onInputChange("is_audited")} defaultValue={values.is_audited}/>
                     <PanelAddModalInput isDisable={isLoading} text={faTextConstant.fullDescription} onChange={onInputChange("full_description")} defaultValue={values.full_description} isFull isArea/>
                     <Button className="panel-modal-btn" disable={isDisable} loading={isLoading} onClick={submit}>

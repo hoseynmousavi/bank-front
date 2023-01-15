@@ -10,7 +10,7 @@ function BanksPage()
 {
     const [searchValue, setSearchValue] = useState("")
     const {data} = GetBanks()
-    const showBanks = data.filter(item => item.name.includes(searchValue))
+    const showBanks = data.filter(item => item.name.includes(searchValue)).sort((a, b) => b.total_score - a.total_score)
 
     function onSearch({value})
     {

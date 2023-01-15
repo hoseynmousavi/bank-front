@@ -19,7 +19,10 @@ function IndicatorPage({route: {match: {params: {id}}}})
                             <div className="bank-page-indicator-item-text-title">{title}</div>
                             <div className="bank-page-indicator-item-text-desc">{description}</div>
                         </div>
-                        <div className="indicator-page-item-button-label no-margin">{faTextConstant.indicatorWeight}{weight}</div>
+                        <div className="indicator-page-item-button-label no-margin">
+                            {faTextConstant.indicatorWeight}
+                            <div className="banks-page-list-btn-content-score margin">{weight}</div>
+                        </div>
                     </div>
                     <div className="indicator-page-box-content">{full_description}</div>
                 </div>
