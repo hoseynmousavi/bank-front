@@ -87,6 +87,8 @@ const faTextConstant = {
     score: "نمره",
 
     addField: "افزودن فیلد",
+
+    maxIs10: "شما نمیتوانید عددی بزرگتر از ۱۰ وارد کنید",
 }
 
 export default faTextConstant
