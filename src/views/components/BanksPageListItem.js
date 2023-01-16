@@ -19,7 +19,7 @@ function BanksPageListItem({data: {_id, logo, name, type, total_score, total_sco
     {
         function determineWidth()
         {
-            setWidth(contRef.current.clientWidth - (2 * 16))
+            if (contRef?.current?.clientWidth) setWidth(contRef.current.clientWidth - (2 * 16))
         }
 
         determineWidth()
@@ -46,7 +46,7 @@ function BanksPageListItem({data: {_id, logo, name, type, total_score, total_sco
                 <div className={`banks-page-list-btn-content ${isChartVisible && "hide"}`}>
                     <div>
                         {faTextConstant.point}
-                        <div className="banks-page-list-btn-content-score">{total_score.toFixed(2)}/10</div>
+                        <div className="banks-page-list-btn-content-score">{(+total_score).toFixed(2)}/10</div>
                     </div>
                     <ArrowSvg className="banks-page-list-btn-icon"/>
                 </div>

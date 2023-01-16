@@ -46,6 +46,19 @@ function update({_id, data, dispatch})
         })
 }
 
+function updateLogo({data, dispatch})
+{
+    return request.put({url: apiUrlsConstant.bank, data})
+        .then(res =>
+        {
+            dispatch({
+                type: UPDATE_BANK,
+                payload: {res},
+            })
+            return res.message
+        })
+}
+
 function add({data, dispatch})
 {
     return request.post({url: apiUrlsConstant.bank, data})
@@ -62,6 +75,7 @@ function add({data, dispatch})
 const BankActions = {
     getBanks,
     update,
+    updateLogo,
     add,
     remove,
 }

@@ -44,18 +44,18 @@ function HomePage()
             </div>
             <div className="ranking-page-banks">
                 <Bank1Svg className="ranking-page-banks-item"/>
-                <Bank2Svg className="ranking-page-banks-item"/>
+                <Bank2Svg className="ranking-page-banks-item mobile-none"/>
                 <Bank3Svg className="ranking-page-banks-item"/>
                 <Bank4Svg className="ranking-page-banks-item"/>
                 <Bank5Svg className="ranking-page-banks-item"/>
                 <Bank6Svg className="ranking-page-banks-item"/>
                 <Bank7Svg className="ranking-page-banks-item"/>
-                <Bank8Svg className="ranking-page-banks-item"/>
-                <Bank9Svg className="ranking-page-banks-item"/>
-                <Bank10Svg className="ranking-page-banks-item"/>
-                <Bank11Svg className="ranking-page-banks-item"/>
-                <Bank12Svg className="ranking-page-banks-item"/>
-                <Bank13Svg className="ranking-page-banks-item"/>
+                <Bank8Svg className="ranking-page-banks-item mobile-none"/>
+                <Bank9Svg className="ranking-page-banks-item mobile-none"/>
+                <Bank10Svg className="ranking-page-banks-item mobile-none"/>
+                <Bank11Svg className="ranking-page-banks-item mobile-none"/>
+                <Bank12Svg className="ranking-page-banks-item mobile-none"/>
+                <Bank13Svg className="ranking-page-banks-item mobile-none"/>
             </div>
             <div className="ranking-page-banners">
                 {

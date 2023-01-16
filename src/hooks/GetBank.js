@@ -8,7 +8,7 @@ function GetBank({_id})
     const {state: {results: bankIndicatorResults}} = useContext(BankIndicatorContext)
     const {state: {results: indicatorResults}} = useContext(IndicatorContext)
     const {state: {results: bankResults}} = useContext(BankContext)
-    const data = bankResults[_id]
+    const data = {...bankResults[_id]}
     const bankIndicator = bankIndicatorResults.filter(item => item.bank_id === data._id).reduce((sum, item) => [...sum, {...item, indicator: indicatorResults[item.indicator_id]}], [])
 
     let total_score_chart = []

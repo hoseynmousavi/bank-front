@@ -5,12 +5,22 @@
   align-items: center;
   background-image: url("../media/images/back.png");
   background-size: cover;
+
+  @media screen and (max-width: 480px) {
+    flex-wrap: wrap;
+  }
 }
 
 .ranking-page-main-title {
   font-size: var(--giant-font);
   color: var(--first-color);
   font-family: "my-font-bold", serif;
+
+  @media screen and (max-width: 480px) {
+    font-size: var(--big-font);
+    text-align: center;
+    padding-top: 32px;
+  }
 }
 
 .ranking-page-main-desc {
@@ -44,6 +54,10 @@
 
 .ranking-page-main-first {
   width: 615px;
+
+  @media screen and (max-width: 480px) {
+    width: 100%;
+  }
 }
 
 .ranking-page-main-second {
@@ -51,6 +65,10 @@
   text-align: left;
   margin-top: auto;
   height: 100%;
+
+  @media screen and (max-width: 480px) {
+    height: auto;
+  }
 }
 
 .ranking-page-main-second-img {
@@ -58,6 +76,12 @@
   height: 100%;
   object-fit: contain;
   margin-right: auto !important;
+
+  @media screen and (max-width: 480px) {
+    width: 230px;
+    height: auto;
+    margin: auto;
+  }
 }
 
 .ranking-page-banks {
@@ -79,6 +103,13 @@
   img {
     height: 100%;
     filter: grayscale(100);
+  }
+
+  @media screen and (max-width: 480px) {
+    margin: 0 16px;
+    &.mobile-none {
+      display: none;
+    }
   }
 }
 

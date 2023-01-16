@@ -23,6 +23,7 @@ const faTextConstant = {
     email: "hoseyn.mousavi78@gmail.com",
     phone: "09123456789",
 
+    name: "نام",
     type: "نوع بانک: ",
     established_year: "سال تاسیس: ",
     total_score: "نمره کل: ",
@@ -73,6 +74,8 @@ const faTextConstant = {
 
     chooseBankLogo: "بارگزاری لوگوی بانک:",
     chooseFile: "انتخاب فایل",
+
+    bankLogo: "لوگوی بانک",
 
     indicatorsList: "لیست شاخص‌ها",
 

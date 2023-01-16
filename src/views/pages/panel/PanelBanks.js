@@ -7,16 +7,21 @@ import {useContext, useState} from "react"
 import PanelBankRow from "../../components/panel/PanelBankRow"
 import PanelBankChart from "../../components/panel/PanelBankChart"
 import PanelAddBankModal from "../../containers/panel/PanelAddBankModal"
-import DeleteSvg from "../../../media/svg/DeleteSvg"
 import bankActions from "../../../context/bank/BankActions"
+import BankActions from "../../../context/bank/BankActions"
 import {BankContext} from "../../../context/bank/BankReducer"
 import {BankIndicatorContext} from "../../../context/bankIndicator/BankIndicatorReducer"
 import toastManager from "../../../seyed-modules/helpers/toastManager"
 import {SUCCESS_TOAST} from "../../../seyed-modules/constant/toastTypes"
 import PanelBankIndicatorBox from "../../components/panel/PanelBankIndicatorBox"
+import GarbageSvg from "../../../media/svg/GarbageSvg"
+import ImageShow from "../../../seyed-modules/components/ImageShow"
+import getImage from "../../../helpers/getImage"
+import EditSvg from "../../../media/svg/EditSvg"
 
 function PanelBanks()
 {
+    const [isLoading, setIsLoading] = useState(false)
     const {dispatch} = useContext(BankContext)
     const {dispatch: bankIndicatorDispatch} = useContext(BankIndicatorContext)
     const [isAdding, setIsAdding] = useState(false)
@@ -48,6 +53,19 @@ function PanelBanks()
         }
     }
 
+    function onChange(e)
+    {
+        setIsLoading(true)
+        const file = e.target.files[0]
+        e.target.value = ""
+        const data = new FormData()
+        data.append("_id", bank._id)
+        data.append("file", file)
+        BankActions.updateLogo({dispatch, data})
+            .then(() => setIsLoading(false))
+            .catch(() => setIsLoading(false))
+    }
+
     return (
         <>
             <PanelSide/>
@@ -70,7 +88,7 @@ function PanelBanks()
                             {
                                 bankId !== "0" &&
                                 <Material className="panel-banks-select-add" onClick={deleteMe}>
-                                    <DeleteSvg className="panel-banks-select-add-icon no-margin"/>
+                                    <GarbageSvg className="panel-banks-select-add-icon no-margin"/>
                                 </Material>
                             }
                         </div>
@@ -82,6 +100,7 @@ function PanelBanks()
                             <div key={bank._id} className="panel-bank">
                                 <div className="panel-bank-info">
                                     <div className="panel-bank-info-title">{faTextConstant.bankInfo}</div>
+                                    <PanelBankRow field="name" bank={bank}/>
                                     <PanelBankRow field="type" bank={bank}/>
                                     <PanelBankRow field="total_score" bank={bank} ltr disable/>
                                     <PanelBankRow field="established_year" bank={bank}/>
@@ -91,9 +110,20 @@ function PanelBanks()
                                     <PanelBankRow field="basic_capital" bank={bank}/>
                                     <PanelBankRow field="major_shareholders" bank={bank}/>
                                 </div>
-                                <div className="panel-bank-info second">
-                                    <div className="panel-bank-info-title">{faTextConstant.bankChartTitle}</div>
-                                    <PanelBankChart bank={bank}/>
+                                <div className="panel-bank-info-second">
+                                    <div className="panel-bank-info-second-box">
+                                        <div className="panel-bank-info-title">{faTextConstant.bankChartTitle}</div>
+                                        <PanelBankChart bank={bank}/>
+                                    </div>
+
+                                    <label className="panel-bank-info-second-box second">
+                                        <div className="panel-bank-info-title edit">
+                                            {faTextConstant.bankLogo}
+                                            <EditSvg className="panel-bank-info-title-edit"/>
+                                        </div>
+                                        <ImageShow className="panel-bank-info-src" src={getImage(bank.logo)}/>
+                                        {!isLoading && <input hidden type="file" onChange={onChange}/>}
+                                    </label>
                                 </div>
                             </div>
                             <PanelBankIndicatorBox bank={bank}/>

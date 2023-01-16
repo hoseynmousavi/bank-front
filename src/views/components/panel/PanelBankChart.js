@@ -5,7 +5,7 @@ function PanelBankChart({bank})
 {
     const contRef = useRef(null)
     const [width, setWidth] = useState(0)
-    const height = width / 1.15
+    const height = width / 2
 
     useEffect(() =>
     {

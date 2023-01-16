@@ -146,11 +146,45 @@
   }
 }
 
+.panel-bank-info-second {
+  width: calc(50% - 8px);
+  margin-inline-start: 16px;
+}
+
+.panel-bank-info-second-box {
+  background-color: var(--box-color);
+  border-radius: var(--first-radius);
+  padding: 16px;
+  box-shadow: var(--first-shadow);
+
+  &.second {
+    display: block;
+    margin-top: 16px;
+  }
+}
+
 .panel-bank-info-title {
   color: var(--first-color);
   font-size: var(--big-font);
   font-family: "my-font-demibold", serif;
   margin-bottom: 16px;
+
+  &.edit {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.panel-bank-info-title-edit {
+  width: 32px;
+  height: 32px;
+  margin-inline-start: 32px;
+}
+
+.panel-bank-info-src {
+  height: 100px;
+  width: 100px;
+  object-fit: contain;
 }
 
 .panel-bank-info-row {
