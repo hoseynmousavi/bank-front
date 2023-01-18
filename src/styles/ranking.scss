@@ -1,6 +1,6 @@
 .ranking-page-main {
   padding: var(--header-height) var(--mobile-first-solid-padding) 0;
-  height: calc(var(--full-height) - 90px);
+  min-height: calc(var(--full-height) - 90px);
   display: flex;
   align-items: center;
   background-image: url("../media/images/back.png");
