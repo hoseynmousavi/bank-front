@@ -46,7 +46,7 @@ function BankPage({route: {match: {params: {id}}}})
                         <div className="bank-page-box-second-text">{faTextConstant.type}{type}</div>
                         <div className="bank-page-box-second-text">{faTextConstant.established_year}{established_year}</div>
                         <div className="bank-page-box-second-text">{faTextConstant.total_score}
-                            <div className="banks-page-list-btn-content-score">{total_score && (+total_score).toFixed(2)}</div>
+                            <div className="banks-page-list-btn-content-score">{total_score && (+total_score).toFixed(1)}</div>
                         </div>
                         <div className="bank-page-box-second-text" title="هزار میلیارد تومان">{faTextConstant.deposit_amount}{showNumber(deposit_amount)}{faTextConstant.capitalUnit}</div>
                         <div className="bank-page-box-second-text">{faTextConstant.major_shareholders}{major_shareholders}</div>

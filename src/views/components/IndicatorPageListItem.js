@@ -36,7 +36,7 @@ function IndicatorPageListItem({data: {_id, name, logo, type, indicator}})
                     <div className="indicator-page-list-item-content-desc">{type}</div>
                 </div>
             </Link>
-            <div className="indicator-page-list-item-percent">{percent.toFixed(2)}{faTextConstant.percent}</div>
+            <div className="indicator-page-list-item-percent">{percent.toFixed(1)}{faTextConstant.percent}</div>
             <div className="indicator-page-list-item-chart">
                 <LineChart width={width} height={height} data={score_chart} margin={{right: 40, top: 32}}>
                     <CartesianGrid stroke="var(--second-text-color)" strokeDasharray="5 5"/>
