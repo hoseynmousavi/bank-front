@@ -111,7 +111,7 @@ function PanelAddUpdateBankIndicator({close, update, bank, indicator})
                         values.score_chart.map((item, index) =>
                             <div key={index + " " + values.score_chart.length} className="panel-modal-content-cont">
                                 <PanelAddModalInput isDisable={isLoading} text={faTextConstant.date} onChange={onInputChange("name", index)} defaultValue={item.name}/>
-                                <PanelAddModalInput isDisable={isLoading} text={faTextConstant.score} onChange={onInputChange("score", index)} defaultValue={item.score} type="number" maxNumber={10}/>
+                                <PanelAddModalInput isDisable={isLoading} text={faTextConstant.score} onChange={onInputChange("score", index)} defaultValue={item.score} type="number"/>
                                 <Material className="panel-modal-content-cont-remove" onClick={deleteField(index)}><DeleteSvg className="panel-modal-content-cont-remove-icon"/></Material>
                             </div>,
                         )

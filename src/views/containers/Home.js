@@ -17,7 +17,7 @@ function Home()
     return (
         <>
             <Header/>
-            <Switch>
+            <Switch desktopAnimation>
                 <Route path={urlConstant.indicator(":id")} render={route => <IndicatorPage route={route}/>}/>
                 <Route path={urlConstant.indicators} render={() => <IndicatorsPage/>}/>
                 <Route path={urlConstant.bank(":id")} render={route => <BankPage route={route}/>}/>

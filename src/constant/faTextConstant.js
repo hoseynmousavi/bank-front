@@ -33,7 +33,7 @@ const faTextConstant = {
     basic_capital: "سرمایه‌ی پایه: ",
     branches_number: "تعداد شعب: ",
 
-    capitalUnit: " (همت)",
+    capitalUnit: " (میلیارد تومان)",
 
     bankChartTitle: "نمودار نمره‌ کل در طول زمان",
 

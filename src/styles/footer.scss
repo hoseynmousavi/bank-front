@@ -11,6 +11,10 @@
   border-top: 2px solid var(--first-text-color);
 
   --section-width: 400px;
+
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+  }
 }
 
 .footer-content-text {
@@ -19,6 +23,12 @@
   text-align: justify;
   text-align-last: start;
   font-size: var(--large-font);
+
+  @media screen and (max-width: 480px) {
+    order: 2;
+    width: 100%;
+    margin: 32px 0;
+  }
 }
 
 .footer-content-center {
@@ -26,6 +36,11 @@
   flex-direction: column;
   align-items: center;
   margin-top: -80px;
+
+  @media screen and (max-width: 480px) {
+    order: 1;
+    width: 100%;
+  }
 }
 
 .footer-content-center-logo {
@@ -79,6 +94,12 @@
   width: var(--section-width);
   text-align: end;
   color: var(--solid-light);
+
+  @media screen and (max-width: 480px) {
+    order: 3;
+    width: 100%;
+    text-align: start;
+  }
 }
 
 .footer-content-contact-title {

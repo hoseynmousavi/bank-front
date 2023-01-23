@@ -25,7 +25,7 @@ function App()
                 isLoading ?
                     <LoadingWrapper haveBg/>
                     :
-                    <Switch>
+                    <Switch desktopAnimation>
                         <Route path={urlConstant.panel} render={() => <Panel/>}/>
                         <Route path="*" render={() => <Home/>}/>
                     </Switch>

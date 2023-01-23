@@ -1,6 +1,11 @@
 .indicator-page-item-button {
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: 480px) {
+    flex-wrap: wrap;
+    margin-top: 16px;
+  }
 }
 
 .indicator-page-item-button-label {
@@ -36,12 +41,24 @@
   border-radius: var(--first-radius);
   border: 3px solid var(--first-border-color);
   padding: 24px 48px;
+
+  @media screen and (max-width: 480px) {
+    margin: 32px 0 0;
+    width: 100%;
+    padding: 24px;
+  }
 }
 
 .indicator-page-box-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
 }
 
 .indicator-page-box-content {
