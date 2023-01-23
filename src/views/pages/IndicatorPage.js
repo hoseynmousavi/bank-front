@@ -9,6 +9,15 @@ function IndicatorPage({route: {match: {params: {id}}}})
 {
     const {data, banks} = GetIndicator({_id: id})
     const {title, description, full_description, weight} = data || {}
+    const showBanks = banks.sort((a, b) =>
+    {
+        const a_score_chart = a?.indicator?.score_chart ?? []
+        const a_percent = (a_score_chart[a_score_chart.length - 1]?.score ?? 0) * 1
+
+        const b_score_chart = b?.indicator?.score_chart ?? []
+        const b_percent = (b_score_chart[b_score_chart.length - 1]?.score ?? 0) * 1
+        return b_percent - a_percent
+    })
 
     return (
         <>
@@ -29,7 +38,7 @@ function IndicatorPage({route: {match: {params: {id}}}})
                 <Input className="banks-page-search" name="search" Icon={SearchSvg} iconClassName="banks-page-search-icon" placeholder={faTextConstant.bankPageSearch}/>
                 <div className="banks-page-list">
                     {
-                        banks.map(item =>
+                        showBanks.map(item =>
                             <IndicatorPageListItem key={item._id} data={item}/>,
                         )
                     }
