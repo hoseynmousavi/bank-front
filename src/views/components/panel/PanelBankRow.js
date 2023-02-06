@@ -36,8 +36,7 @@ function PanelBankRow({field, bank, ltr, disable})
     return (
         <div className="panel-bank-info-row">
             <div className="panel-bank-info-row-title">{faTextConstant[field]}</div>
-            <input maxLength={20}
-                   className={`panel-bank-info-row-desc ${ltr ? "ltr" : ""}`}
+            <input className={`panel-bank-info-row-desc ${ltr ? "ltr" : ""}`}
                    value={value.toString()}
                    onChange={onChange}
                    disabled={isLoading || disable}
