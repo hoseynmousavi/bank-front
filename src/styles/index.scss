@@ -1,5 +1,6 @@
-@import "../seyed-modules/styles/index";
+@import "../modules/styles/index";
 
+@import "variables";
 @import "common";
 @import "animations";
 @import "input";
@@ -12,10 +13,6 @@
 @import "panel-side";
 @import "panel-dashboard";
 @import "ranking";
-
-body {
-  background-color: var(--first-background-color) !important;
-}
 
 @font-face {
   font-family: "my-font";

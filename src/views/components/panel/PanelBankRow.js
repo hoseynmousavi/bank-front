@@ -1,11 +1,11 @@
 import faTextConstant from "../../../constant/faTextConstant"
 import {useContext, useState} from "react"
-import CheckSvg from "../../../seyed-modules/media/svg/CheckSvg"
-import Material from "../../../seyed-modules/components/Material"
-import MyLoader from "../../../seyed-modules/components/MyLoader"
+import CheckSvg from "../../../modules/media/svg/CheckSvg"
+import Material from "../../../modules/components/Material"
+import MyLoader from "../../../modules/components/MyLoader"
 import BankActions from "../../../context/bank/BankActions"
-import toastManager from "../../../seyed-modules/helpers/toastManager"
-import {SUCCESS_TOAST} from "../../../seyed-modules/constant/toastTypes"
+import toastManager from "../../../modules/helpers/toastManager"
+import {SUCCESS_TOAST} from "../../../modules/constant/toastTypes"
 import {BankContext} from "../../../context/bank/BankReducer"
 
 function PanelBankRow({field, bank, ltr, disable})

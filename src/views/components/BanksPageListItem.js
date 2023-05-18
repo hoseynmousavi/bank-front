@@ -1,11 +1,11 @@
-import ImageShow from "../../seyed-modules/components/ImageShow"
-import Button from "../../seyed-modules/components/Button"
+import ImageShow from "../../modules/components/ImageShow"
+import Button from "../../modules/components/Button"
 import {CartesianGrid, Line, LineChart, Tooltip, XAxis, YAxis} from "recharts"
 import {useEffect, useRef, useState} from "react"
 import faTextConstant from "../../constant/faTextConstant"
 import ArrowSvg from "../../media/svg/ArrowSvg"
 import getImage from "../../helpers/getImage"
-import Link from "../../seyed-modules/components/Link"
+import Link from "../../modules/components/Link"
 import urlConstant from "../../constant/urlConstant"
 
 function BanksPageListItem({data: {_id, logo, name, type, total_score, total_score_chart}})

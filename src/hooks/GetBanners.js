@@ -1,6 +1,6 @@
 import {useContext, useRef} from "react"
 import BannerActions from "../context/banner/BannerActions"
-import GetData from "../seyed-modules/request/GetData"
+import GetData from "../modules/request/GetData"
 import {BannerContext} from "../context/banner/BannerReducer"
 
 function GetBanners()

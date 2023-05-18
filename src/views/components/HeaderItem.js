@@ -1,5 +1,5 @@
-import Link from "../../seyed-modules/components/Link"
-import Material from "../../seyed-modules/components/Material"
+import Link from "../../modules/components/Link"
+import Material from "../../modules/components/Material"
 
 function HeaderItem({text, link})
 {

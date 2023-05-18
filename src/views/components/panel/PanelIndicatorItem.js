@@ -1,13 +1,13 @@
 import faTextConstant from "../../../constant/faTextConstant"
 import {Fragment, useContext, useState} from "react"
 import DeleteSvg from "../../../media/svg/DeleteSvg"
-import Material from "../../../seyed-modules/components/Material"
+import Material from "../../../modules/components/Material"
 import EditSvg from "../../../media/svg/EditSvg"
 import IndicatorActions from "../../../context/indicator/IndicatorActions"
 import {IndicatorContext} from "../../../context/indicator/IndicatorReducer"
-import toastManager from "../../../seyed-modules/helpers/toastManager"
-import {SUCCESS_TOAST} from "../../../seyed-modules/constant/toastTypes"
-import MyLoader from "../../../seyed-modules/components/MyLoader"
+import toastManager from "../../../modules/helpers/toastManager"
+import {SUCCESS_TOAST} from "../../../modules/constant/toastTypes"
+import MyLoader from "../../../modules/components/MyLoader"
 import {BankIndicatorContext} from "../../../context/bankIndicator/BankIndicatorReducer"
 
 function PanelIndicatorItem({item, toggleUpdate})

@@ -1,5 +1,5 @@
-import Material from "../../seyed-modules/components/Material"
-import createMaterialColor from "../../seyed-modules/helpers/createMaterialColor"
+import Material from "../../modules/components/Material"
+import createMaterialColor from "../../modules/helpers/createMaterialColor"
 
 function FooterSocial({href, Icon})
 {

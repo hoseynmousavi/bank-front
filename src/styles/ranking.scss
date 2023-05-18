@@ -5,6 +5,7 @@
   align-items: center;
   background-image: url("../media/images/back.png");
   background-size: cover;
+  background-color: var(--first-background-color);
 
   @media screen and (max-width: 480px) {
     flex-wrap: wrap;

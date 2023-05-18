@@ -1,7 +1,7 @@
 import PanelSide from "../../containers/panel/PanelSide"
 import faTextConstant from "../../../constant/faTextConstant"
 import GetBanners from "../../../hooks/GetBanners"
-import MyLoader from "../../../seyed-modules/components/MyLoader"
+import MyLoader from "../../../modules/components/MyLoader"
 import getImage from "../../../helpers/getImage"
 import PanelBanner from "../../components/panel/PanelBanner"
 

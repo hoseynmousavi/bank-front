@@ -1,15 +1,15 @@
-import {useEffect, useRef, useState, memo} from "react"
+import {memo, useEffect, useRef, useState} from "react"
 import regexConstant from "../../constant/regexConstant"
 import checkNationalCode from "../../helpers/checkNationalCode"
-import numberCorrection from "../../seyed-modules/helpers/numberCorrection"
+import numberCorrection from "../../modules/helpers/numberCorrection"
 import inputKeyDownEnter from "../../helpers/inputKeyDownEnter"
 import AuthActions from "../../context/auth/AuthActions"
 import inputConstant from "../../constant/inputConstant"
-import MyLoader from "../../seyed-modules/components/MyLoader"
-import CheckSvg from "../../seyed-modules/media/svg/CheckSvg"
-import CloseSvg from "../../seyed-modules/media/svg/CloseSvg"
-import {REQUEST_CANCEL} from "../../seyed-modules/constant/toastTypes"
-import onScroll from "../../seyed-modules/helpers/onScroll"
+import MyLoader from "../../modules/components/MyLoader"
+import CheckSvg from "../../modules/media/svg/CheckSvg"
+import CloseSvg from "../../modules/media/svg/CloseSvg"
+import {REQUEST_CANCEL} from "../../modules/constant/toastTypes"
+import onScroll from "../../modules/helpers/onScroll"
 
 function Input({
                    className, name, autoComplete = "on", focusOnMountDesktop, label, type = "text", validation, placeholder = "", onIconClick, disableOnScroll,

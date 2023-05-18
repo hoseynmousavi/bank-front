@@ -1,9 +1,9 @@
 import {CartesianGrid, Line, LineChart, Tooltip, XAxis, YAxis} from "recharts"
 import {useEffect, useRef, useState} from "react"
-import ImageShow from "../../seyed-modules/components/ImageShow"
+import ImageShow from "../../modules/components/ImageShow"
 import faTextConstant from "../../constant/faTextConstant"
 import getImage from "../../helpers/getImage"
-import Link from "../../seyed-modules/components/Link"
+import Link from "../../modules/components/Link"
 import urlConstant from "../../constant/urlConstant"
 
 function IndicatorPageListItem({data: {_id, name, logo, type, indicator}})

@@ -1,9 +1,9 @@
-import Material from "../../../seyed-modules/components/Material"
-import ImageShow from "../../../seyed-modules/components/ImageShow"
+import Material from "../../../modules/components/Material"
+import ImageShow from "../../../modules/components/ImageShow"
 import BannerActions from "../../../context/banner/BannerActions"
 import {useContext, useState} from "react"
 import {BannerContext} from "../../../context/banner/BannerReducer"
-import MyLoader from "../../../seyed-modules/components/MyLoader"
+import MyLoader from "../../../modules/components/MyLoader"
 import UploadSvg from "../../../media/svg/UploadSvg"
 import faTextConstant from "../../../constant/faTextConstant"
 

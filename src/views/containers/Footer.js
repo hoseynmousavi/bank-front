@@ -1,5 +1,5 @@
 import faTextConstant from "../../constant/faTextConstant"
-import ImageShow from "../../seyed-modules/components/ImageShow"
+import ImageShow from "../../modules/components/ImageShow"
 import logo from "../../media/images/logo.png"
 import LinkedinSvg from "../../media/svg/LinkedinSvg"
 import FooterSocial from "../components/FooterSocial"

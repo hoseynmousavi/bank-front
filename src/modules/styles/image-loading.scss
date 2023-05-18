@@ -1,0 +1,41 @@
+.image-loading-main {
+  display: block;
+  object-fit: cover;
+
+  &.image-loading {
+    background-image: linear-gradient(to right, var(--first-border-color) 0%, var(--box-color) 15%, var(--first-border-color) 30%);
+    background-size: 200%;
+    background-position: 100% 0;
+    animation: shimmer ease-in-out 1.5s infinite;
+    content-visibility: hidden;
+  }
+
+  &.load-end {
+    animation: fade-in-img var(--transition-method) 300ms;
+    content-visibility: auto;
+  }
+
+  &.load-fail {
+    animation: fade-in-img var(--transition-method) 300ms;
+    content-visibility: auto;
+    background-color: var(--first-border-color);
+    object-fit: contain;
+  }
+}
+
+@keyframes shimmer {
+  to {
+    background-position: -100% 0;
+  }
+}
+
+@keyframes fade-in-img {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

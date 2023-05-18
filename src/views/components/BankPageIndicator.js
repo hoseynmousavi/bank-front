@@ -1,10 +1,10 @@
 import faTextConstant from "../../constant/faTextConstant"
-import Button from "../../seyed-modules/components/Button"
+import Button from "../../modules/components/Button"
 import ArrowSvg from "../../media/svg/ArrowSvg"
 import {CartesianGrid, Line, LineChart, Tooltip, XAxis, YAxis} from "recharts"
 import {useEffect, useRef, useState} from "react"
 import urlConstant from "../../constant/urlConstant"
-import Link from "../../seyed-modules/components/Link"
+import Link from "../../modules/components/Link"
 
 function BankPageIndicator({data: {score_chart, indicator: {_id, title, description}}})
 {

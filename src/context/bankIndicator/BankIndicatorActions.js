@@ -1,4 +1,4 @@
-import request from "../../seyed-modules/request/request"
+import request from "../../modules/request/request"
 import apiUrlsConstant from "../../constant/apiUrlsConstant"
 import {ADD_BANK_INDICATORS, GET_BANK_INDICATORS, UPDATE_BANK_INDICATORS} from "./BankIndicatorTypes"
 

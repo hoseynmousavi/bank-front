@@ -1,6 +1,6 @@
-import numberCorrection from "../../../seyed-modules/helpers/numberCorrection"
-import toastManager from "../../../seyed-modules/helpers/toastManager"
-import {INFO_TOAST} from "../../../seyed-modules/constant/toastTypes"
+import numberCorrection from "../../../modules/helpers/numberCorrection"
+import toastManager from "../../../modules/helpers/toastManager"
+import {INFO_TOAST} from "../../../modules/constant/toastTypes"
 import faTextConstant from "../../../constant/faTextConstant"
 
 function PanelAddModalInput({isFull, isArea, isDisable, text, onChange, type = "text", defaultValue, ltr, maxNumber})

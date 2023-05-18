@@ -1,7 +1,7 @@
 import faTextConstant from "../../../constant/faTextConstant"
-import CheckSvg from "../../../seyed-modules/media/svg/CheckSvg"
+import CheckSvg from "../../../modules/media/svg/CheckSvg"
 import {useState} from "react"
-import Material from "../../../seyed-modules/components/Material"
+import Material from "../../../modules/components/Material"
 
 function PanelAddModalCheckbox({isDisable, text, onChange, defaultValue})
 {

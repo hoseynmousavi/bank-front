@@ -1,0 +1,65 @@
+.switch-tab-cont {
+  .switch-cont {
+    position: static;
+    height: auto;
+    box-shadow: none;
+    overflow: visible;
+    transform: none;
+  }
+
+  .switch {
+    height: auto;
+    overflow-x: visible;
+    overflow-y: visible;
+  }
+}
+
+.switch-cont {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: var(--full-height);
+  transition: height ease 0.15s;
+  overflow: hidden;
+  box-shadow: 0 3px 11px rgba(0, 0, 0, 0.2);
+  transform: translate3d(0, 0, 0);
+
+  &.hide-tab {
+    content-visibility: hidden;
+    display: none;
+  }
+
+  &.hide-mobile {
+    content-visibility: hidden;
+    display: none;
+
+    &.safari {
+      display: block;
+      visibility: hidden;
+    }
+  }
+
+  @media screen and (min-width: 480px) {
+    &.hide {
+      content-visibility: hidden;
+      display: none;
+
+      &.safari {
+        display: block;
+        visibility: hidden;
+      }
+    }
+  }
+}
+
+.switch {
+  scrollbar-width: thin;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  @supports (overflow-y: overlay) {
+    overflow-y: overlay
+  }
+}

@@ -1,7 +1,7 @@
-import Switch from "../../../seyed-modules/components/Switch"
+import Switch from "../../../modules/components/Switch"
 import urlConstant from "../../../constant/urlConstant"
 import {lazy, useContext} from "react"
-import PrivateRoute from "../../../seyed-modules/components/PrivateRoute"
+import PrivateRoute from "../../../modules/components/PrivateRoute"
 import {AuthContext} from "../../../context/auth/AuthReducer"
 
 const PanelIndicators = lazy(() => import("../../pages/panel/PanelIndicators"))

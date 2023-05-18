@@ -1,6 +1,6 @@
 import faTextConstant from "../../constant/faTextConstant"
-import Button from "../../seyed-modules/components/Button"
-import Link from "../../seyed-modules/components/Link"
+import Button from "../../modules/components/Button"
+import Link from "../../modules/components/Link"
 import urlConstant from "../../constant/urlConstant"
 
 function IndicatorPageItem({data: {_id, title, description, weight, is_audited}, isPanel, haveRelation, onClick})

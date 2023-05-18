@@ -1,26 +1,16 @@
-import ImageShow from "../../seyed-modules/components/ImageShow"
+import ImageShow from "../../modules/components/ImageShow"
 import logo from "../../media/images/logo.png"
 import faTextConstant from "../../constant/faTextConstant"
 import HeaderItem from "../components/HeaderItem"
 import urlConstant from "../../constant/urlConstant"
-import Link from "../../seyed-modules/components/Link"
-import Material from "../../seyed-modules/components/Material"
+import Link from "../../modules/components/Link"
+import Material from "../../modules/components/Material"
 import HamburgerSvg from "../../media/svg/HamburgerSvg"
 import {useState} from "react"
 
 function Header()
 {
     const [sideOpen, setSideOpen] = useState(false)
-    const isFixed = true
-    // const [isFixed, setIsFixed] = useState(true)
-    // const {location} = GetCurrentLocation()
-    //
-    // function condition({scrollTop})
-    // {
-    //     setIsFixed(scrollTop > 0)
-    // }
-    //
-    // ScrollY({condition, updateParams: [location], timeout: 300})
 
     function toggleSide()
     {
@@ -34,7 +24,7 @@ function Header()
 
     return (
         <>
-            <header className={`header ${isFixed ? "fixed" : ""}`}>
+            <header className="header">
                 <Material className="header-hamburger" onClick={toggleSide}>
                     <HamburgerSvg/>
                 </Material>

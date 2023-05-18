@@ -1,5 +1,5 @@
-import Material from "../../../seyed-modules/components/Material"
-import Link from "../../../seyed-modules/components/Link"
+import Material from "../../../modules/components/Material"
+import Link from "../../../modules/components/Link"
 
 function PanelSideItem({url, text, Icon, location})
 {

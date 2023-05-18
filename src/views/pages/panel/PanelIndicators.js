@@ -3,8 +3,8 @@ import faTextConstant from "../../../constant/faTextConstant"
 import GetIndicators from "../../../hooks/GetIndicators"
 import {useState} from "react"
 import PanelIndicatorItem from "../../components/panel/PanelIndicatorItem"
-import PlusSvg from "../../../seyed-modules/media/svg/PlusSvg"
-import Material from "../../../seyed-modules/components/Material"
+import PlusSvg from "../../../modules/media/svg/PlusSvg"
+import Material from "../../../modules/components/Material"
 import PanelAddIndicatorModal from "../../containers/panel/PanelAddIndicatorModal"
 
 function PanelIndicators()

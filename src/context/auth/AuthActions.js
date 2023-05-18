@@ -1,12 +1,10 @@
 import {SET_USER} from "./AuthTypes"
-import request from "../../seyed-modules/request/request"
+import request from "../../modules/request/request"
 import apiUrlsConstant from "../../constant/apiUrlsConstant"
-
-const base = process.env.REACT_APP_REST_URL
 
 function login({username, password, dispatch})
 {
-    return request.post({base, url: apiUrlsConstant.login, data: {username, password}})
+    return request.post({url: apiUrlsConstant.login, data: {username, password}})
         .then(res =>
         {
             setUser({user: res, dispatch})
