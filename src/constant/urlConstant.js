@@ -12,11 +12,11 @@ const urlConstant = {
 
     contactUs: "/contact-us",
 
-    panel: "/panel",
-    panelLogin: "/panel/login",
-    panelDashboard: "/panel/dashboard",
-    panelBanks: "/panel/banks",
-    panelIndicators: "/panel/indicators",
+    panel: "/AuK5Yx5H5B*N7AUi4LU0Onjj%eNebA",
+    panelLogin: "/AuK5Yx5H5B*N7AUi4LU0Onjj%eNebA/login",
+    panelDashboard: "/AuK5Yx5H5B*N7AUi4LU0Onjj%eNebA/dashboard",
+    panelBanks: "/AuK5Yx5H5B*N7AUi4LU0Onjj%eNebA/banks",
+    panelIndicators: "/AuK5Yx5H5B*N7AUi4LU0Onjj%eNebA/indicators",
 }
 
 export default urlConstant

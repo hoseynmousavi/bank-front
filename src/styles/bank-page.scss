@@ -113,16 +113,11 @@
 }
 
 .bank-page-chart-content {
-  width: 107%;
-  margin-right: -3%;
+  width: 100%;
   direction: ltr;
 
   text {
     stroke: var(--second-text-color);
-  }
-
-  &.panel {
-
   }
 }
 

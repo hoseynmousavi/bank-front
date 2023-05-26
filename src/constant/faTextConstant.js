@@ -37,6 +37,7 @@ const faTextConstant = {
 
     bankChartTitle: "نمودار نمره‌ کل در طول زمان",
 
+    compareBanks: "مقایسه بانک‌ها",
     indicatorDesc: "توضیحات شاخص",
     indicatorCount: "",
     indicatorWeight: "وزن: ",

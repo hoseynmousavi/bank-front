@@ -41,7 +41,7 @@ function IndicatorPageListItem({data: {_id, name, logo, type, indicator}})
                 <LineChart width={width} height={height} data={score_chart} margin={{right: 40, top: 32}}>
                     <CartesianGrid stroke="var(--second-text-color)" strokeDasharray="5 5"/>
                     <XAxis stroke="var(--second-text-color)" dataKey="name"/>
-                    <YAxis ticks={[2, 4, 6, 8, 10]} stroke="var(--second-text-color)"/>
+                    <YAxis stroke="var(--second-text-color)"/>
                     <Tooltip/>
                     <Line type="monotone" dataKey="score" stroke="var(--first-color)" strokeWidth={3}/>
                 </LineChart>

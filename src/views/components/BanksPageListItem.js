@@ -54,7 +54,7 @@ function BanksPageListItem({data: {_id, logo, name, type, total_score, total_sco
                     <LineChart width={width} height={height} data={total_score_chart} margin={{right: 40, top: 32}}>
                         <CartesianGrid stroke="var(--first-background-color)" strokeDasharray="5 5"/>
                         <XAxis stroke="white" dataKey="name"/>
-                        <YAxis ticks={[2, 4, 6, 8, 10]} stroke="white"/>
+                        <YAxis stroke="white"/>
                         <Tooltip/>
                         <Line type="monotone" dataKey="score" stroke="var(--first-color)" strokeWidth={3}/>
                     </LineChart>

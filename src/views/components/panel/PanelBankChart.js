@@ -25,7 +25,7 @@ function PanelBankChart({bank})
             <LineChart width={width} height={height} data={bank.total_score_chart}>
                 <CartesianGrid stroke="var(--first-border-color)"/>
                 <XAxis stroke="var(--first-border-color)" dataKey="name"/>
-                <YAxis ticks={[2, 4, 6, 8, 10]} stroke="var(--first-border-color)"/>
+                <YAxis stroke="var(--first-border-color)"/>
                 <Tooltip/>
                 <Line type="monotone" dataKey="score" stroke="var(--first-color)" strokeWidth={3}/>
             </LineChart>
