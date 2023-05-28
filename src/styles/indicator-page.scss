@@ -5,6 +5,8 @@
   @media screen and (max-width: 480px) {
     flex-wrap: wrap;
     margin-top: 16px;
+    display: flex;
+    justify-content: center;
   }
 }
 

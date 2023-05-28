@@ -20,7 +20,7 @@ const faTextConstant = {
     emailUs: "ایمیل: ",
     callUs: "تلفن: ",
 
-    email: "hoseyn.mousavi78@gmail.com",
+    email: "Ecometrica.ir@gmail.com",
     phone: "09123456789",
 
     name: "نام",

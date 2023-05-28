@@ -57,16 +57,17 @@ function HomePage()
                 <Bank12Svg className="ranking-page-banks-item mobile-none"/>
                 <Bank13Svg className="ranking-page-banks-item mobile-none"/>
             </div>
-            <div className="ranking-page-banners">
-                {
-                    banners.map(item =>
-                        <ImageShow key={item._id} src={getImage(item.src)} className={`ranking-page-banners-item index-${item.index}`}/>,
-                    )
-                }
-            </div>
-            <Footer/>
-        </>
-    )
-}
 
-export default HomePage
+            {/*//<div className="ranking-page-banners">*/}
+            {/*//  {*/}
+            {/*//    banners.map(item =>*/}
+            {/*//       <ImageShow key={item._id} src={getImage(item.src)} className={`ranking-page-banners-item index-${item.index}`}/>,*/}
+            {/*// )*/}
+            {/*// }*/}
+            {/*//  </div>*/}
+            <Footer/>
+            </>
+            )
+        }
+
+            export default HomePage

@@ -46,7 +46,7 @@ function BanksPageListItem({data: {_id, logo, name, type, total_score, total_sco
                 <div className={`banks-page-list-btn-content ${isChartVisible && "hide"}`}>
                     <div>
                         {faTextConstant.point}
-                        <div className="banks-page-list-btn-content-score">{(+total_score).toFixed(1)}/10</div>
+                        <div className="banks-page-list-btn-content-score">{(+total_score).toFixed(1)}</div>
                     </div>
                     <ArrowSvg className="banks-page-list-btn-icon"/>
                 </div>

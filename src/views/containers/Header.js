@@ -1,5 +1,5 @@
 import ImageShow from "../../modules/components/ImageShow"
-import logo from "../../media/images/logo.png"
+import logo from "../../media/images/logo.svg"
 import faTextConstant from "../../constant/faTextConstant"
 import HeaderItem from "../components/HeaderItem"
 import urlConstant from "../../constant/urlConstant"

@@ -1,5 +1,5 @@
 import ImageShow from "../../../modules/components/ImageShow"
-import logo from "../../../media/images/logo.png"
+import logo from "../../../media/images/logo.svg"
 import Input from "../../components/Input"
 import Button from "../../../modules/components/Button"
 import {useContext, useState} from "react"

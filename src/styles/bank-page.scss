@@ -185,6 +185,7 @@
   font-size: var(--big-font);
   transition: all var(--first-transition);
 
+
   &.no-margin {
     margin-left: 0;
   }
@@ -194,6 +195,7 @@
     width: 0;
     opacity: 0;
   }
+
 
   @media screen and (max-width: 480px) {
     margin-top: 32px;
