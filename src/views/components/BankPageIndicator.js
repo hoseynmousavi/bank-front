@@ -40,7 +40,7 @@ function BankPageIndicator({data: {score_chart, indicator: {_id, title, descript
                     <div className="bank-page-indicator-item-text-desc">{description}</div>
                 </div>
                 <Link to={urlConstant.indicator(_id)}>
-                    <Button className={`bank-page-indicator-item-first-btn ${isChartVisible ? "" : "hide"}`}>{faTextConstant.indicatorDesc}</Button>
+                    <Button className={`bank-page-indicator-item-first-button ${isChartVisible ? "" : "hide"}`}>{faTextConstant.indicatorDesc}</Button>
                 </Link>
             </div>
             <div className="bank-page-indicator-item-buttons" ref={contRef}>

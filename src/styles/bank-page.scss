@@ -175,6 +175,34 @@
   }
 }
 
+.bank-page-indicator-item-first-button {
+  border-radius: var(--first-radius);
+  border: 2px solid var(--first-text-color);
+  background-color: var(--box-color) !important;
+  color: var(--first-text-color);
+  width: 200px;
+  margin-left: 16px;
+  font-size: var(--big-font);
+  transition: all var(--first-transition);
+
+  &.no-margin {
+    margin-left: 0;
+  }
+
+  &.hide {
+    height: 0;
+    width: 0;
+    opacity: 0;
+  }
+
+
+  @media screen and (max-width: 480px) {
+    margin-top: 32px;
+    margin-inline-end: 0;
+    display: none;
+  }
+}
+
 .bank-page-indicator-item-first-btn {
   border-radius: var(--first-radius);
   border: 2px solid var(--first-text-color);
@@ -194,11 +222,16 @@
     height: 0;
     width: 0;
     opacity: 0;
+    @media screen and (max-width: 480px) {
+      width: 200px;
+      height: 48px;
+      opacity: 10;
+    }
   }
 
 
   @media screen and (max-width: 480px) {
-    margin-top: 32px;
+    margin-top: 48px;
     margin-inline-end: 0;
   }
 }
