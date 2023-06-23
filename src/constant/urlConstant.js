@@ -12,11 +12,11 @@ const urlConstant = {
 
     contactUs: "/contact-us",
 
-    panel: "/AuK5Yx5H5B*N7AUi4LU0Onjj%eNebA",
-    panelLogin: "/AuK5Yx5H5B*N7AUi4LU0Onjj%eNebA/login",
-    panelDashboard: "/AuK5Yx5H5B*N7AUi4LU0Onjj%eNebA/dashboard",
-    panelBanks: "/AuK5Yx5H5B*N7AUi4LU0Onjj%eNebA/banks",
-    panelIndicators: "/AuK5Yx5H5B*N7AUi4LU0Onjj%eNebA/indicators",
+    panel: "/AuK5Yx5H5BN7AUi4LU0OnjjeNebA",
+    panelLogin: "/AuK5Yx5H5BN7AUi4LU0OnjjeNebA/login",
+    panelDashboard: "/AuK5Yx5H5BN7AUi4LU0OnjjeNebA/dashboard",
+    panelBanks: "/AuK5Yx5H5BN7AUi4LU0OnjjeNebA/banks",
+    panelIndicators: "/AuK5Yx5H5BN7AUi4LU0OnjjeNebA/indicators",
 }
 
 export default urlConstant
